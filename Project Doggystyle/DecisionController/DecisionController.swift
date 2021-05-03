@@ -5,6 +5,10 @@
 //  Created by Charlie Arcodia on 5/3/21.
 //
 
+/*
+ From here, Auth is decided and routed accordingly.
+ */
+
 import UIKit
 
 class DecisionController: UIViewController {
