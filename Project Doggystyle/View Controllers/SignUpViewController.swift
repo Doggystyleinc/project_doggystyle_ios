@@ -10,38 +10,39 @@ import UIKit
 class SignUpViewController: UIViewController {
     private let verticalPadding: CGFloat = 30.0
     
-    //TODO: - refactor to resuable view
     private let welcomeTitle: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.robotoBold(size: 30)
         label.text = "Welcome!"
-        label.textColor = .black
+        label.textColor = .headerColor
         return label
     }()
     
-    //TODO: - refactor to resuable view
     private let welcomeSubTitle: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.robotoRegular(size: 18)
         label.text = "Please sign up with:"
-        label.textColor = .black
+        label.textColor = .textColor
         return label
     }()
     
-    //TODO: - refactor to resuable view
-    private let dividerView: UIView = {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = UIColor.divider
-        return view
+    private let footerText: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.font = UIFont.robotoRegular(size: 18)
+        label.text = "Already have an account?"
+        label.textColor = .textColor
+        return label
     }()
     
-    //TODO: - refactor to resuable view
+    private let dividerView = DividerView()
+    
+    private let emailButton = DSButton(titleText: "email", backgroundColor: .dsGrey, titleColor: .white)
+    private let googleButton = DSButton(text: "google")
+    private let facebookButton = DSButton(text: "facebook")
+    private let appleButton = DSButton(text: "apple")
+    
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
-        button.titleLabel?.font = UIFont.robotoBold(size: 18)
-        button.setTitle("EMAIL", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor.buttonBackground
         return button
     }()
 
@@ -49,7 +50,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.addWelcomeViews()
-        self.configureSignUpButtons()
+        self.addSignUpButtons()
     }
 }
 
@@ -75,12 +76,33 @@ extension SignUpViewController {
 
 //MARK: - Configure Sign Up Buttons
 extension SignUpViewController {
-    private func configureSignUpButtons() {
-        self.view.addSubview(signUpButton)
+    private func addSignUpButtons() {
+        self.view.addSubview(emailButton)
+        emailButton.topToBottom(of: self.dividerView, offset: verticalPadding)
+        emailButton.height(44)
+        emailButton.left(to: self.view, offset: verticalPadding)
+        emailButton.right(to: self.view, offset: -verticalPadding)
         
-        signUpButton.topToBottom(of: self.dividerView, offset: 30.0)
-        signUpButton.height(44)
-        signUpButton.left(to: self.view, offset: verticalPadding)
-        signUpButton.right(to: self.view, offset: -verticalPadding)
+        self.view.addSubview(googleButton)
+        googleButton.topToBottom(of: self.emailButton, offset: 10.0)
+        googleButton.height(44)
+        googleButton.left(to: self.view, offset: verticalPadding)
+        googleButton.right(to: self.view, offset: -verticalPadding)
+        
+        self.view.addSubview(facebookButton)
+        facebookButton.topToBottom(of: self.googleButton, offset: 10.0)
+        facebookButton.height(44)
+        facebookButton.left(to: self.view, offset: verticalPadding)
+        facebookButton.right(to: self.view, offset: -verticalPadding)
+        
+        self.view.addSubview(appleButton)
+        appleButton.topToBottom(of: self.facebookButton, offset: 10.0)
+        appleButton.height(44)
+        appleButton.left(to: self.view, offset: verticalPadding)
+        appleButton.right(to: self.view, offset: -verticalPadding)
+        
+        self.view.addSubview(footerText)
+        footerText.topToBottom(of: self.appleButton, offset: verticalPadding)
+        footerText.centerX(to: self.view)
     }
 }

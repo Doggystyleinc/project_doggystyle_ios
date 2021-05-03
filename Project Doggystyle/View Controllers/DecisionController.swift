@@ -42,9 +42,11 @@ extension DecisionController {
 //MARK: - Authentication Checks
 extension DecisionController {
     private func authenticationCheck() {
+        //User is authenticated
         if isUserAuthenticated {
             self.perform(#selector(presentHomeController), with: nil, afterDelay: 1.0)
         } else {
+            //User is not authenticated
             self.perform(#selector(presentSignUpController), with: nil, afterDelay: 1.0)
         }
     }

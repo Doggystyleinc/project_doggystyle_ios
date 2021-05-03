@@ -25,6 +25,8 @@
 		CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = CD9AD5D226407E7E007B509B /* TinyConstraints */; };
 		CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D426407F2A007B509B /* SignUpViewController.swift */; };
 		CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D626408153007B509B /* HomeViewController.swift */; };
+		CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5DA26409BC2007B509B /* DSButton.swift */; };
+		CD9AD5E12640A544007B509B /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5E02640A544007B509B /* DividerView.swift */; };
 		E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF69264074F6006696CF /* AppDelegate.swift */; };
 		E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6B264074F6006696CF /* SceneDelegate.swift */; };
 		E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6D264074F6006696CF /* DecisionController.swift */; };
@@ -50,6 +52,8 @@
 		CD9AD5CF26407D53007B509B /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
 		CD9AD5D426407F2A007B509B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CD9AD5D626408153007B509B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD9AD5DA26409BC2007B509B /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
+		CD9AD5E02640A544007B509B /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		E3F6AF66264074F6006696CF /* Project Doggystyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Doggystyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F6AF69264074F6006696CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F6AF6B264074F6006696CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,31 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		CD9AD5D826409BB1007B509B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD9AD5DF2640A534007B509B /* UIViews */,
+				CD9AD5D926409BB8007B509B /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD9AD5D926409BB8007B509B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				CD9AD5DA26409BC2007B509B /* DSButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		CD9AD5DF2640A534007B509B /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				CD9AD5E02640A544007B509B /* DividerView.swift */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
 		E3F6AF5D264074F6006696CF = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +148,7 @@
 		E3F6AF68264074F6006696CF /* Project Doggystyle */ = {
 			isa = PBXGroup;
 			children = (
+				CD9AD5D826409BB1007B509B /* Views */,
 				CD9AD5B626407D21007B509B /* Fonts */,
 				CD9AD5B126407CCB007B509B /* Helpers */,
 				E3F6AF7F2640752F006696CF /* Admin */,
@@ -240,7 +270,9 @@
 				CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */,
 				CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */,
 				CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */,
+				CD9AD5E12640A544007B509B /* DividerView.swift in Sources */,
 				E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */,
+				CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */,
 				CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */,
 				E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */,
 				E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */,
