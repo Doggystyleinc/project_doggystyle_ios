@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF69264074F6006696CF /* AppDelegate.swift */; };
 		E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6B264074F6006696CF /* SceneDelegate.swift */; };
-		E3F6AF6E264074F6006696CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6D264074F6006696CF /* ViewController.swift */; };
-		E3F6AF71264074F6006696CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F6AF6F264074F6006696CF /* Main.storyboard */; };
+		E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6D264074F6006696CF /* DecisionController.swift */; };
 		E3F6AF73264074F7006696CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F6AF72264074F7006696CF /* Assets.xcassets */; };
 		E3F6AF76264074F7006696CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F6AF74264074F7006696CF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		E3F6AF66264074F6006696CF /* Project Doggystyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Doggystyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F6AF69264074F6006696CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F6AF6B264074F6006696CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E3F6AF6D264074F6006696CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E3F6AF70264074F6006696CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3F6AF6D264074F6006696CF /* DecisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionController.swift; sourceTree = "<group>"; };
 		E3F6AF72264074F7006696CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3F6AF75264074F7006696CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3F6AF77264074F7006696CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,30 @@
 		E3F6AF68264074F6006696CF /* Project Doggystyle */ = {
 			isa = PBXGroup;
 			children = (
-				E3F6AF69264074F6006696CF /* AppDelegate.swift */,
-				E3F6AF6B264074F6006696CF /* SceneDelegate.swift */,
-				E3F6AF6D264074F6006696CF /* ViewController.swift */,
-				E3F6AF6F264074F6006696CF /* Main.storyboard */,
+				E3F6AF7F2640752F006696CF /* Admin */,
+				E3F6AF812640753F006696CF /* DecisionController */,
 				E3F6AF72264074F7006696CF /* Assets.xcassets */,
-				E3F6AF74264074F7006696CF /* LaunchScreen.storyboard */,
-				E3F6AF77264074F7006696CF /* Info.plist */,
 			);
 			path = "Project Doggystyle";
+			sourceTree = "<group>";
+		};
+		E3F6AF7F2640752F006696CF /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				E3F6AF74264074F7006696CF /* LaunchScreen.storyboard */,
+				E3F6AF77264074F7006696CF /* Info.plist */,
+				E3F6AF69264074F6006696CF /* AppDelegate.swift */,
+				E3F6AF6B264074F6006696CF /* SceneDelegate.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		E3F6AF812640753F006696CF /* DecisionController */ = {
+			isa = PBXGroup;
+			children = (
+				E3F6AF6D264074F6006696CF /* DecisionController.swift */,
+			);
+			path = DecisionController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +139,6 @@
 			files = (
 				E3F6AF76264074F7006696CF /* LaunchScreen.storyboard in Resources */,
 				E3F6AF73264074F7006696CF /* Assets.xcassets in Resources */,
-				E3F6AF71264074F6006696CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3F6AF6E264074F6006696CF /* ViewController.swift in Sources */,
+				E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */,
 				E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */,
 				E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +158,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E3F6AF6F264074F6006696CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E3F6AF70264074F6006696CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E3F6AF74264074F7006696CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +292,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N29F9HMKW5;
-				INFOPLIST_FILE = "Project Doggystyle/Info.plist";
+				INFOPLIST_FILE = "Project Doggystyle/Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kphonereact.Project-Doggystyle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N29F9HMKW5;
-				INFOPLIST_FILE = "Project Doggystyle/Info.plist";
+				INFOPLIST_FILE = "Project Doggystyle/Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kphonereact.Project-Doggystyle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
