@@ -3,10 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */; };
+		CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B426407D01007B509B /* UIColor+Ext.swift */; };
+		CD9AD5C326407D40007B509B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */; };
+		CD9AD5C426407D40007B509B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5B826407D3F007B509B /* Roboto-Thin.ttf */; };
+		CD9AD5C526407D40007B509B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5B926407D3F007B509B /* Roboto-Black.ttf */; };
+		CD9AD5C626407D40007B509B /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5BA26407D3F007B509B /* Roboto-BlackItalic.ttf */; };
+		CD9AD5C726407D40007B509B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5BB26407D3F007B509B /* Roboto-Bold.ttf */; };
+		CD9AD5C826407D40007B509B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5BC26407D3F007B509B /* Roboto-Light.ttf */; };
+		CD9AD5C926407D40007B509B /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5BD26407D3F007B509B /* Roboto-Italic.ttf */; };
+		CD9AD5CA26407D40007B509B /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5BE26407D3F007B509B /* Roboto-LightItalic.ttf */; };
+		CD9AD5CB26407D40007B509B /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5BF26407D3F007B509B /* Roboto-MediumItalic.ttf */; };
+		CD9AD5CC26407D40007B509B /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5C026407D40007B509B /* Roboto-BoldItalic.ttf */; };
+		CD9AD5CD26407D40007B509B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5C126407D40007B509B /* Roboto-Medium.ttf */; };
+		CD9AD5CE26407D40007B509B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5C226407D40007B509B /* Roboto-ThinItalic.ttf */; };
+		CD9AD5D026407D53007B509B /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5CF26407D53007B509B /* ConcertOne-Regular.ttf */; };
+		CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = CD9AD5D226407E7E007B509B /* TinyConstraints */; };
+		CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D426407F2A007B509B /* SignUpViewController.swift */; };
+		CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D626408153007B509B /* HomeViewController.swift */; };
 		E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF69264074F6006696CF /* AppDelegate.swift */; };
 		E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6B264074F6006696CF /* SceneDelegate.swift */; };
 		E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6D264074F6006696CF /* DecisionController.swift */; };
@@ -15,6 +33,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		CD9AD5B426407D01007B509B /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CD9AD5B826407D3F007B509B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		CD9AD5B926407D3F007B509B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		CD9AD5BA26407D3F007B509B /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CD9AD5BB26407D3F007B509B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CD9AD5BC26407D3F007B509B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		CD9AD5BD26407D3F007B509B /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		CD9AD5BE26407D3F007B509B /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		CD9AD5BF26407D3F007B509B /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CD9AD5C026407D40007B509B /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CD9AD5C126407D40007B509B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		CD9AD5C226407D40007B509B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		CD9AD5CF26407D53007B509B /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
+		CD9AD5D426407F2A007B509B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CD9AD5D626408153007B509B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E3F6AF66264074F6006696CF /* Project Doggystyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Doggystyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F6AF69264074F6006696CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F6AF6B264074F6006696CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,12 +64,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD9AD5B126407CCB007B509B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */,
+				CD9AD5B426407D01007B509B /* UIColor+Ext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CD9AD5B626407D21007B509B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CD9AD5CF26407D53007B509B /* ConcertOne-Regular.ttf */,
+				CD9AD5B926407D3F007B509B /* Roboto-Black.ttf */,
+				CD9AD5BA26407D3F007B509B /* Roboto-BlackItalic.ttf */,
+				CD9AD5BB26407D3F007B509B /* Roboto-Bold.ttf */,
+				CD9AD5C026407D40007B509B /* Roboto-BoldItalic.ttf */,
+				CD9AD5BD26407D3F007B509B /* Roboto-Italic.ttf */,
+				CD9AD5BC26407D3F007B509B /* Roboto-Light.ttf */,
+				CD9AD5BE26407D3F007B509B /* Roboto-LightItalic.ttf */,
+				CD9AD5C126407D40007B509B /* Roboto-Medium.ttf */,
+				CD9AD5BF26407D3F007B509B /* Roboto-MediumItalic.ttf */,
+				CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */,
+				CD9AD5B826407D3F007B509B /* Roboto-Thin.ttf */,
+				CD9AD5C226407D40007B509B /* Roboto-ThinItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		E3F6AF5D264074F6006696CF = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +119,10 @@
 		E3F6AF68264074F6006696CF /* Project Doggystyle */ = {
 			isa = PBXGroup;
 			children = (
+				CD9AD5B626407D21007B509B /* Fonts */,
+				CD9AD5B126407CCB007B509B /* Helpers */,
 				E3F6AF7F2640752F006696CF /* Admin */,
-				E3F6AF812640753F006696CF /* DecisionController */,
+				E3F6AF812640753F006696CF /* View Controllers */,
 				E3F6AF72264074F7006696CF /* Assets.xcassets */,
 			);
 			path = "Project Doggystyle";
@@ -72,12 +139,14 @@
 			path = Admin;
 			sourceTree = "<group>";
 		};
-		E3F6AF812640753F006696CF /* DecisionController */ = {
+		E3F6AF812640753F006696CF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				E3F6AF6D264074F6006696CF /* DecisionController.swift */,
+				CD9AD5D426407F2A007B509B /* SignUpViewController.swift */,
+				CD9AD5D626408153007B509B /* HomeViewController.swift */,
 			);
-			path = DecisionController;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +165,9 @@
 			dependencies = (
 			);
 			name = "Project Doggystyle";
+			packageProductDependencies = (
+				CD9AD5D226407E7E007B509B /* TinyConstraints */,
+			);
 			productName = "Project Doggystyle";
 			productReference = E3F6AF66264074F6006696CF /* Project Doggystyle.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +195,9 @@
 				Base,
 			);
 			mainGroup = E3F6AF5D264074F6006696CF;
+			packageReferences = (
+				CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = E3F6AF67264074F6006696CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +212,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9AD5CD26407D40007B509B /* Roboto-Medium.ttf in Resources */,
+				CD9AD5C726407D40007B509B /* Roboto-Bold.ttf in Resources */,
+				CD9AD5C926407D40007B509B /* Roboto-Italic.ttf in Resources */,
+				CD9AD5CA26407D40007B509B /* Roboto-LightItalic.ttf in Resources */,
+				CD9AD5C426407D40007B509B /* Roboto-Thin.ttf in Resources */,
+				CD9AD5C626407D40007B509B /* Roboto-BlackItalic.ttf in Resources */,
+				CD9AD5C326407D40007B509B /* Roboto-Regular.ttf in Resources */,
+				CD9AD5D026407D53007B509B /* ConcertOne-Regular.ttf in Resources */,
+				CD9AD5CC26407D40007B509B /* Roboto-BoldItalic.ttf in Resources */,
+				CD9AD5C526407D40007B509B /* Roboto-Black.ttf in Resources */,
 				E3F6AF76264074F7006696CF /* LaunchScreen.storyboard in Resources */,
+				CD9AD5CE26407D40007B509B /* Roboto-ThinItalic.ttf in Resources */,
+				CD9AD5C826407D40007B509B /* Roboto-Light.ttf in Resources */,
+				CD9AD5CB26407D40007B509B /* Roboto-MediumItalic.ttf in Resources */,
 				E3F6AF73264074F7006696CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,7 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */,
+				CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */,
+				CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */,
 				E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */,
+				CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */,
 				E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */,
 				E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */,
 			);
@@ -345,6 +437,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD9AD5D226407E7E007B509B /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E3F6AF5E264074F6006696CF /* Project object */;
 }
