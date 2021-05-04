@@ -51,6 +51,7 @@ class SignUpViewController: UIViewController {
         self.view.backgroundColor = .white
         self.addWelcomeViews()
         self.addSignUpButtons()
+        self.addTargets()
     }
 }
 
@@ -104,5 +105,19 @@ extension SignUpViewController {
         self.view.addSubview(footerText)
         footerText.topToBottom(of: self.appleButton, offset: verticalPadding)
         footerText.centerX(to: self.view)
+    }
+}
+
+//MARK: - Add Button Targets
+extension SignUpViewController {
+    private func addTargets() {
+        self.emailButton.addTarget(self, action: #selector(presentEmailSignUp(_:)), for: .touchUpInside)
+    }
+}
+
+//MARK: - @objc Functions
+extension SignUpViewController {
+    @objc private func presentEmailSignUp(_ sender: UIButton) {
+        self.present(EmailSignUpViewController(), animated: true)
     }
 }

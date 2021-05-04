@@ -12,5 +12,5 @@ extension UIColor {
     static let dsGrey = #colorLiteral(red: 0.4509803922, green: 0.4509803922, blue: 0.4509803922, alpha: 1) // #737373
     static let textColor = #colorLiteral(red: 0.3019607843, green: 0.3019607843, blue: 0.3019607843, alpha: 1) //#4D4D4D
     static let headerColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.9) // #000000
-
+    static let textFieldBackground = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1) // #F1F1F1
 }
