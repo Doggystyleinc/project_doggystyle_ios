@@ -45,6 +45,7 @@ final class EmailSignUpViewController: UIViewController {
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Mobile Number"
         textField.keyboardType = .phonePad
+        textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
     
@@ -79,7 +80,7 @@ final class EmailSignUpViewController: UIViewController {
         label.textColor = .errorColor
         return label
     }()
-    //TODO: Add to container & validate
+    
     private let mobileErrorLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .errorColor
@@ -173,6 +174,9 @@ extension EmailSignUpViewController {
 //MARK: - Configure Text Fields
 extension EmailSignUpViewController {
     private func addTextFields() {
+        self.passwordTextField.enablePasswordToggle()
+        self.confirmPWTextField.enablePasswordToggle()
+        
         self.containerView.addSubview(emailTextField)
         emailTextField.top(to: self.containerView, offset: 30.0)
         emailTextField.height(44.0)
@@ -184,13 +188,17 @@ extension EmailSignUpViewController {
         emailErrorLabel.left(to: self.containerView, offset: 5)
         
         self.containerView.addSubview(mobileTextField)
-        mobileTextField.topToBottom(of: self.emailErrorLabel, offset: 10.0)
+        mobileTextField.topToBottom(of: self.emailErrorLabel, offset: 20.0)
         mobileTextField.height(44.0)
         mobileTextField.left(to: self.containerView)
         mobileTextField.right(to: self.containerView)
         
+        self.containerView.addSubview(mobileErrorLabel)
+        mobileErrorLabel.topToBottom(of: mobileTextField, offset: 5)
+        mobileErrorLabel.left(to: self.containerView, offset: 5)
+        
         self.containerView.addSubview(passwordTextField)
-        passwordTextField.topToBottom(of: self.mobileTextField, offset: 20.0)
+        passwordTextField.topToBottom(of: self.mobileErrorLabel, offset: 20.0)
         passwordTextField.height(44.0)
         passwordTextField.left(to: self.containerView)
         passwordTextField.right(to: self.containerView)
@@ -303,6 +311,15 @@ extension EmailSignUpViewController: UITextFieldDelegate {
             emailErrorLabel.text = "Invalid Email"
         }
         
+        guard let mobileNumber = mobileTextField.text else { return }
+        
+        if mobileNumber.isValidPhoneNumber {
+            mobileErrorLabel.text = ""
+            mobileErrorLabel.isHidden = true
+        } else {
+            mobileErrorLabel.isHidden = false
+            mobileErrorLabel.text = "Required Field"
+        }
     }
 }
 

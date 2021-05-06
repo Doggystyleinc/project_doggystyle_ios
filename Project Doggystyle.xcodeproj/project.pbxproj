@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD726442E5300C337AB /* SignInViewController.swift */; };
+		CD7F6FDA264435FA00C337AB /* TextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */; };
 		CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */; };
 		CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B426407D01007B509B /* UIColor+Ext.swift */; };
 		CD9AD5C326407D40007B509B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		CD7F6FD726442E5300C337AB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Ext.swift"; sourceTree = "<group>"; };
 		CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		CD9AD5B426407D01007B509B /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */,
 				CD9AD5B426407D01007B509B /* UIColor+Ext.swift */,
 				CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */,
+				CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */,
 				CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */,
 				CD9AD5E12640A544007B509B /* DividerView.swift in Sources */,
+				CD7F6FDA264435FA00C337AB /* TextField+Ext.swift in Sources */,
 				CDA5F62B2642F71E00EF5A49 /* String + Ext.swift in Sources */,
 				E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */,
 				CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */,
