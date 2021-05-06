@@ -34,6 +34,19 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
+    private let signInButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributes: [NSAttributedString.Key : Any] = [
+            .font : UIFont.robotoRegular(size: 20.0),
+            .foregroundColor : UIColor.textColor,
+            .underlineStyle : NSUnderlineStyle.single.rawValue
+        ]
+        let attributeString = NSMutableAttributedString(string: "SIGN IN", attributes: attributes)
+        button.setAttributedTitle(attributeString, for: .normal)
+        button.addTarget(self, action: #selector(presentSignIn(_:)), for: .touchUpInside)
+        return button
+    }()
+    
     private let dividerView = DividerView()
     
     private let emailButton = DSButton(titleText: "email", backgroundColor: .dsGrey, titleColor: .white)
@@ -75,7 +88,7 @@ extension SignUpViewController {
     }
 }
 
-//MARK: - Configure Sign Up Buttons
+//MARK: - Configure Sign Up/In Buttons
 extension SignUpViewController {
     private func addSignUpButtons() {
         self.view.addSubview(emailButton)
@@ -105,6 +118,11 @@ extension SignUpViewController {
         self.view.addSubview(footerText)
         footerText.topToBottom(of: self.appleButton, offset: verticalPadding)
         footerText.centerX(to: self.view)
+        
+        self.view.addSubview(signInButton)
+        signInButton.topToBottom(of: footerText, offset: 24)
+        signInButton.centerX(to: self.view)
+        signInButton.height(24)
     }
 }
 
@@ -119,5 +137,9 @@ extension SignUpViewController {
 extension SignUpViewController {
     @objc private func presentEmailSignUp(_ sender: UIButton) {
         self.present(EmailSignUpViewController(), animated: true)
+    }
+    
+    @objc private func presentSignIn(_ sender: UIButton) {
+        self.present(SignInViewController(), animated: true)
     }
 }

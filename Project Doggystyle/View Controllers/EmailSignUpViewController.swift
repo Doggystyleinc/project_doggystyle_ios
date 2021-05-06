@@ -11,7 +11,6 @@ final class EmailSignUpViewController: UIViewController {
     private var didAgreeToTerms = false
     private let verticalPadding: CGFloat = 30.0
     private var scrollView = UIScrollView(frame: .zero)
-    
     private let containerView = UIView(frame: .zero)
     
     private let signUpTitle: UILabel = {
@@ -29,13 +28,14 @@ final class EmailSignUpViewController: UIViewController {
         button.addTarget(self, action: #selector(dismissVC(_:)), for: .touchUpInside)
         return button
     }()
-
+    
     private let emailTextField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.borderStyle = .roundedRect
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Email"
         textField.keyboardType = .emailAddress
+        textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
     
@@ -74,8 +74,21 @@ final class EmailSignUpViewController: UIViewController {
         return textField
     }()
     
+    private let emailErrorLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .errorColor
+        return label
+    }()
+    //TODO: Add to container & validate
+    private let mobileErrorLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .errorColor
+        return label
+    }()
+    
     private let termsTitle: UIButton = {
         let button = UIButton(type: .system)
+        button.isEnabled = false
         button.setTitle("Agree with", for: .normal)
         button.setTitleColor(.textColor, for: .normal)
         button.titleLabel?.font = UIFont.robotoRegular(size: 16)
@@ -85,6 +98,7 @@ final class EmailSignUpViewController: UIViewController {
     private let termsLink: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Terms and Conditions", for: .normal)
+        button.addTarget(self, action: #selector(didTapTerms(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -100,7 +114,11 @@ final class EmailSignUpViewController: UIViewController {
     }()
     
     private let dividerView = DividerView()
-    private let signUpButton = DSButton(titleText: "sign up", backgroundColor: .dsGrey, titleColor: .white)
+    private let signUpButton: DSButton = {
+       let button = DSButton(titleText: "sign up", backgroundColor: .dsGrey, titleColor: .white)
+        button.addTarget(self, action: #selector(didTapSignUp(_:)), for: .touchUpInside)
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,25 +178,29 @@ extension EmailSignUpViewController {
         emailTextField.height(44.0)
         emailTextField.left(to: self.containerView)
         emailTextField.right(to: self.containerView)
-
+        
+        self.containerView.addSubview(emailErrorLabel)
+        emailErrorLabel.topToBottom(of: emailTextField, offset: 5)
+        emailErrorLabel.left(to: self.containerView, offset: 5)
+        
         self.containerView.addSubview(mobileTextField)
-        mobileTextField.topToBottom(of: self.emailTextField, offset: 20.0)
+        mobileTextField.topToBottom(of: self.emailErrorLabel, offset: 10.0)
         mobileTextField.height(44.0)
         mobileTextField.left(to: self.containerView)
         mobileTextField.right(to: self.containerView)
-
+        
         self.containerView.addSubview(passwordTextField)
         passwordTextField.topToBottom(of: self.mobileTextField, offset: 20.0)
         passwordTextField.height(44.0)
         passwordTextField.left(to: self.containerView)
         passwordTextField.right(to: self.containerView)
-
+        
         self.containerView.addSubview(confirmPWTextField)
         confirmPWTextField.topToBottom(of: self.passwordTextField, offset: 20.0)
         confirmPWTextField.height(44.0)
         confirmPWTextField.left(to: self.containerView)
         confirmPWTextField.right(to: self.containerView)
-
+        
         self.containerView.addSubview(referralTextField)
         referralTextField.topToBottom(of: self.confirmPWTextField, offset: 20.0)
         referralTextField.height(44.0)
@@ -233,14 +255,19 @@ extension EmailSignUpViewController {
     }
     
     @objc private func agreeToTerms(_ sender: UIButton) {
-        if !didAgreeToTerms {
+        print(#function)
+        
+        if didAgreeToTerms == false {
             sender.backgroundColor = .systemGreen
             didAgreeToTerms = true
         } else {
             sender.backgroundColor = .textFieldBackground
             didAgreeToTerms = false
         }
-        
+    }
+    
+    @objc private func didTapTerms(_ sender: UIButton) {
+        print(#function)
     }
     
     @objc private func didTapSignUp(_ sender: UIButton) {
@@ -249,23 +276,34 @@ extension EmailSignUpViewController {
     
     @objc func adjustForKeyboard(notification: Notification) {
         guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-
+        
         let keyboardScreenEndFrame = keyboardValue.cgRectValue
         let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
-
+        
         if notification.name == UIResponder.keyboardWillHideNotification {
             scrollView.contentInset = .zero
         } else {
             scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
         }
-
+        
         scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
 }
 
-//MARK: - TextField Delegate
+//MARK: - TextField
 extension EmailSignUpViewController: UITextFieldDelegate {
-    
+    @objc private func textDidChange(_ sender: UITextField) {
+        guard let emailText = emailTextField.text else { return }
+        
+        if emailText.isValidEmail {
+            emailErrorLabel.text = ""
+            emailErrorLabel.isHidden = true
+        } else {
+            emailErrorLabel.isHidden = false
+            emailErrorLabel.text = "Invalid Email"
+        }
+        
+    }
 }
 
 //MARK: - Tap Anywhere To Dismiss Keyboard

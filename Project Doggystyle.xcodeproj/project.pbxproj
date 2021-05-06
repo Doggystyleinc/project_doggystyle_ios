@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD726442E5300C337AB /* SignInViewController.swift */; };
 		CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */; };
 		CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B426407D01007B509B /* UIColor+Ext.swift */; };
 		CD9AD5C326407D40007B509B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */; };
@@ -28,6 +29,7 @@
 		CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5DA26409BC2007B509B /* DSButton.swift */; };
 		CD9AD5E12640A544007B509B /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5E02640A544007B509B /* DividerView.swift */; };
 		CD9AD5EB26419B59007B509B /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5EA26419B59007B509B /* EmailSignUpViewController.swift */; };
+		CDA5F62B2642F71E00EF5A49 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */; };
 		E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF69264074F6006696CF /* AppDelegate.swift */; };
 		E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6B264074F6006696CF /* SceneDelegate.swift */; };
 		E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6D264074F6006696CF /* DecisionController.swift */; };
@@ -36,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD7F6FD726442E5300C337AB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		CD9AD5B426407D01007B509B /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		CD9AD5DA26409BC2007B509B /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		CD9AD5E02640A544007B509B /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		CD9AD5EA26419B59007B509B /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
+		CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		E3F6AF66264074F6006696CF /* Project Doggystyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Doggystyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F6AF69264074F6006696CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F6AF6B264074F6006696CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */,
 				CD9AD5B426407D01007B509B /* UIColor+Ext.swift */,
+				CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				CD9AD5D426407F2A007B509B /* SignUpViewController.swift */,
 				CD9AD5D626408153007B509B /* HomeViewController.swift */,
 				CD9AD5EA26419B59007B509B /* EmailSignUpViewController.swift */,
+				CD7F6FD726442E5300C337AB /* SignInViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -274,9 +280,11 @@
 				CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */,
 				CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */,
 				CD9AD5E12640A544007B509B /* DividerView.swift in Sources */,
+				CDA5F62B2642F71E00EF5A49 /* String + Ext.swift in Sources */,
 				E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */,
 				CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */,
 				CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */,
+				CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */,
 				E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */,
 				E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */,
 				CD9AD5EB26419B59007B509B /* EmailSignUpViewController.swift in Sources */,
