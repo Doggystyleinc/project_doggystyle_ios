@@ -23,7 +23,7 @@ extension String {
     }
     
     var isValidPhoneNumber: Bool {
-        let phoneNumberFormat = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneNumberFormat = "^\\d{3}\\d{3}\\d{4}$"
 //        let internationalFormat = "^\\+(?:[0-9]?){6,14}[0-9]$"
         let numberPredicate = NSPredicate(format: "SELF MATCHES %@", phoneNumberFormat)
         return numberPredicate.evaluate(with: self)
