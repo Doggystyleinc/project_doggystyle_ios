@@ -35,6 +35,8 @@ final class EmailSignUpViewController: UIViewController {
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Email"
         textField.keyboardType = .emailAddress
+        textField.returnKeyType = .next
+        textField.tag = 0
         textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
@@ -44,7 +46,9 @@ final class EmailSignUpViewController: UIViewController {
         textField.borderStyle = .roundedRect
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Mobile Number"
-        textField.keyboardType = .phonePad
+        textField.keyboardType = .numbersAndPunctuation
+        textField.returnKeyType = .next
+        textField.tag = 1
         textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
@@ -56,6 +60,8 @@ final class EmailSignUpViewController: UIViewController {
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
         textField.textContentType = .oneTimeCode
+        textField.returnKeyType = .next
+        textField.tag = 2
         textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
@@ -67,6 +73,8 @@ final class EmailSignUpViewController: UIViewController {
         textField.placeholder = "Confirm Password"
         textField.isSecureTextEntry = true
         textField.textContentType = .oneTimeCode
+        textField.returnKeyType = .next
+        textField.tag = 3
         textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
@@ -77,7 +85,7 @@ final class EmailSignUpViewController: UIViewController {
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Referral Code"
         textField.returnKeyType = .done
-        textField.tag = 5
+        textField.tag = 4
         return textField
     }()
     
@@ -332,11 +340,13 @@ extension EmailSignUpViewController {
 //MARK: - TextField Delegate
 extension EmailSignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.tag == 5 {
+        if let nextTextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+            nextTextField.becomeFirstResponder()
+        } else {
             textField.resignFirstResponder()
             scrollView.setContentOffset(.zero, animated: true)
         }
-        return true
+        return false
     }
     
     @objc private func textDidChange(_ sender: UITextField) {
