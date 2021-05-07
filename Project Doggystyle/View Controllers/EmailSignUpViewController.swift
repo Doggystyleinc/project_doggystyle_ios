@@ -55,6 +55,8 @@ final class EmailSignUpViewController: UIViewController {
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
+        textField.textContentType = .oneTimeCode
+        textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
     
@@ -64,6 +66,8 @@ final class EmailSignUpViewController: UIViewController {
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Confirm Password"
         textField.isSecureTextEntry = true
+        textField.textContentType = .oneTimeCode
+        textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         return textField
     }()
     
@@ -78,12 +82,21 @@ final class EmailSignUpViewController: UIViewController {
     private let emailErrorLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .errorColor
+        label.font = UIFont.robotoRegular(size: 14)
         return label
     }()
     
     private let mobileErrorLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .errorColor
+        label.font = UIFont.robotoRegular(size: 14)
+        return label
+    }()
+    
+    private let confirmPWErrorLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .errorColor
+        label.font = UIFont.robotoRegular(size: 14)
         return label
     }()
     
@@ -167,7 +180,7 @@ extension EmailSignUpViewController {
         self.scrollView.addSubview(containerView)
         containerView.edgesToSuperview()
         containerView.width(to: self.scrollView)
-        containerView.height(355)
+        containerView.height(420)
     }
 }
 
@@ -209,8 +222,12 @@ extension EmailSignUpViewController {
         confirmPWTextField.left(to: self.containerView)
         confirmPWTextField.right(to: self.containerView)
         
+        self.containerView.addSubview(confirmPWErrorLabel)
+        confirmPWErrorLabel.topToBottom(of: confirmPWTextField, offset: 5)
+        confirmPWErrorLabel.left(to: self.containerView, offset: 5)
+        
         self.containerView.addSubview(referralTextField)
-        referralTextField.topToBottom(of: self.confirmPWTextField, offset: 20.0)
+        referralTextField.topToBottom(of: self.confirmPWErrorLabel, offset: 20.0)
         referralTextField.height(44.0)
         referralTextField.left(to: self.containerView)
         referralTextField.right(to: self.containerView)
@@ -301,24 +318,23 @@ extension EmailSignUpViewController {
 //MARK: - TextField
 extension EmailSignUpViewController: UITextFieldDelegate {
     @objc private func textDidChange(_ sender: UITextField) {
-        guard let emailText = emailTextField.text else { return }
         
-        if emailText.isValidEmail {
-            emailErrorLabel.text = ""
-            emailErrorLabel.isHidden = true
-        } else {
-            emailErrorLabel.isHidden = false
-            emailErrorLabel.text = "Invalid Email"
-        }
+        guard let emailText = emailTextField.text else { return }
+        emailErrorLabel.text = emailText.isValidEmail ? "" : "Invalid Email"
+        emailErrorLabel.isHidden = emailText.isValidEmail ? true : false
         
         guard let mobileNumber = mobileTextField.text else { return }
+        mobileErrorLabel.text = mobileNumber.isValidPhoneNumber ? "" : "Required Field"
+        mobileErrorLabel.isHidden = mobileNumber.isValidPhoneNumber ? true : false
         
-        if mobileNumber.isValidPhoneNumber {
-            mobileErrorLabel.text = ""
-            mobileErrorLabel.isHidden = true
+        guard let passwordText = passwordTextField.text else { return }
+        
+        if passwordText != confirmPWTextField.text {
+            confirmPWErrorLabel.text = "Passwords Do Not Match"
+            confirmPWErrorLabel.isHidden = false
         } else {
-            mobileErrorLabel.isHidden = false
-            mobileErrorLabel.text = "Required Field"
+            confirmPWErrorLabel.isHidden = true
+            confirmPWErrorLabel.text = ""
         }
     }
 }
