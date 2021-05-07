@@ -76,6 +76,8 @@ final class EmailSignUpViewController: UIViewController {
         textField.borderStyle = .roundedRect
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Referral Code"
+        textField.returnKeyType = .done
+        textField.tag = 5
         return textField
     }()
     
@@ -136,7 +138,7 @@ final class EmailSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        configureVC()
         observeForKeyboard()
         dismissKeyboardTapGesture()
         addTitleViews()
@@ -144,6 +146,18 @@ final class EmailSignUpViewController: UIViewController {
         addTextFields()
         addTermsViews()
         addSignUpButton()
+    }
+}
+
+//MARK: - Configure View Controller
+extension EmailSignUpViewController {
+    private func configureVC() {
+        self.view.backgroundColor = .white
+        self.emailTextField.delegate = self
+        self.mobileTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.confirmPWTextField.delegate = self
+        self.referralTextField.delegate = self
     }
 }
 
@@ -315,8 +329,16 @@ extension EmailSignUpViewController {
     }
 }
 
-//MARK: - TextField
+//MARK: - TextField Delegate
 extension EmailSignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 5 {
+            textField.resignFirstResponder()
+            scrollView.setContentOffset(.zero, animated: true)
+        }
+        return true
+    }
+    
     @objc private func textDidChange(_ sender: UITextField) {
         
         guard let emailText = emailTextField.text else { return }
