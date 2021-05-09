@@ -103,6 +103,14 @@ final class EmailSignUpViewController: UIViewController {
         return label
     }()
     
+    private let passwordErrorLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .errorColor
+        label.numberOfLines = 0
+        label.font = UIFont.robotoRegular(size: 14)
+        return label
+    }()
+    
     private let confirmPWErrorLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .errorColor
@@ -202,7 +210,7 @@ extension EmailSignUpViewController {
         self.scrollView.addSubview(containerView)
         containerView.edgesToSuperview()
         containerView.width(to: self.scrollView)
-        containerView.height(420)
+        containerView.height(450)
     }
 }
 
@@ -238,8 +246,13 @@ extension EmailSignUpViewController {
         passwordTextField.left(to: self.containerView)
         passwordTextField.right(to: self.containerView)
         
+        self.containerView.addSubview(passwordErrorLabel)
+        passwordErrorLabel.topToBottom(of: passwordTextField, offset: 5)
+        passwordErrorLabel.left(to: self.containerView, offset: 5)
+        passwordErrorLabel.right(to: self.containerView, offset: -5)
+        
         self.containerView.addSubview(confirmPWTextField)
-        confirmPWTextField.topToBottom(of: self.passwordTextField, offset: 20.0)
+        confirmPWTextField.topToBottom(of: self.passwordErrorLabel, offset: 20.0)
         confirmPWTextField.height(44.0)
         confirmPWTextField.left(to: self.containerView)
         confirmPWTextField.right(to: self.containerView)
@@ -360,6 +373,8 @@ extension EmailSignUpViewController: UITextFieldDelegate {
         mobileErrorLabel.isHidden = mobileNumber.isValidPhoneNumber ? true : false
         
         guard let passwordText = passwordTextField.text else { return }
+        passwordErrorLabel.text = passwordText.isValidPassword ? "" : "Password must be 8 characters"
+        passwordErrorLabel.isHidden = passwordText.isValidPassword ? true : false
         
         if passwordText != confirmPWTextField.text {
             confirmPWErrorLabel.text = "Passwords Do Not Match"
