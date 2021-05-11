@@ -10,6 +10,19 @@
 		CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD726442E5300C337AB /* SignInViewController.swift */; };
 		CD7F6FDA264435FA00C337AB /* TextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */; };
 		CD7F6FDC2644389B00C337AB /* ReferralCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FDB2644389B00C337AB /* ReferralCodeViewController.swift */; };
+		CD7F6FF3264AAD5200C337AB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */; };
+		CD7F6FF5264AAD5200C337AB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */; };
+		CD7F6FF7264AAD5200C337AB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */; };
+		CD7F6FF9264AAD5200C337AB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF8264AAD5200C337AB /* FirebaseStorage */; };
+		CD7F6FFB264AAD5200C337AB /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */; };
+		CD7F6FFD264AAD5200C337AB /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */; };
+		CD7F6FFF264AAD5200C337AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFE264AAD5200C337AB /* FirebaseAuth */; };
+		CD7F7001264AAD5200C337AB /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */; };
+		CD7F7003264AAD5200C337AB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7002264AAD5200C337AB /* FirebaseMessaging */; };
+		CD7F7006264AAE4700C337AB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7005264AAE4700C337AB /* Lottie */; };
+		CD7F7009264AAE8700C337AB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7008264AAE8700C337AB /* SDWebImage */; };
+		CD7F700B264AAE8700C337AB /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700A264AAE8700C337AB /* SDWebImageMapKit */; };
+		CD7F700E264AAF6F00C337AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700D264AAF6F00C337AB /* Alamofire */; };
 		CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */; };
 		CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B426407D01007B509B /* UIColor+Ext.swift */; };
 		CD9AD5C326407D40007B509B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */; };
@@ -78,7 +91,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7F6FF5264AAD5200C337AB /* FirebaseDatabase in Frameworks */,
+				CD7F700E264AAF6F00C337AB /* Alamofire in Frameworks */,
+				CD7F6FFD264AAD5200C337AB /* FirebaseFunctions in Frameworks */,
+				CD7F700B264AAE8700C337AB /* SDWebImageMapKit in Frameworks */,
+				CD7F7003264AAD5200C337AB /* FirebaseMessaging in Frameworks */,
 				CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */,
+				CD7F6FF7264AAD5200C337AB /* FirebaseAnalytics in Frameworks */,
+				CD7F6FFB264AAD5200C337AB /* FirebaseCrashlytics in Frameworks */,
+				CD7F7009264AAE8700C337AB /* SDWebImage in Frameworks */,
+				CD7F7006264AAE4700C337AB /* Lottie in Frameworks */,
+				CD7F7001264AAD5200C337AB /* FirebaseDynamicLinks in Frameworks */,
+				CD7F6FF9264AAD5200C337AB /* FirebaseStorage in Frameworks */,
+				CD7F6FF3264AAD5200C337AB /* FirebaseFirestore in Frameworks */,
+				CD7F6FFF264AAD5200C337AB /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +238,19 @@
 			name = "Project Doggystyle";
 			packageProductDependencies = (
 				CD9AD5D226407E7E007B509B /* TinyConstraints */,
+				CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */,
+				CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */,
+				CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */,
+				CD7F6FF8264AAD5200C337AB /* FirebaseStorage */,
+				CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */,
+				CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */,
+				CD7F6FFE264AAD5200C337AB /* FirebaseAuth */,
+				CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */,
+				CD7F7002264AAD5200C337AB /* FirebaseMessaging */,
+				CD7F7005264AAE4700C337AB /* Lottie */,
+				CD7F7008264AAE8700C337AB /* SDWebImage */,
+				CD7F700A264AAE8700C337AB /* SDWebImageMapKit */,
+				CD7F700D264AAF6F00C337AB /* Alamofire */,
 			);
 			productName = "Project Doggystyle";
 			productReference = E3F6AF66264074F6006696CF /* Project Doggystyle.app */;
@@ -242,6 +281,10 @@
 			mainGroup = E3F6AF5D264074F6006696CF;
 			packageReferences = (
 				CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = E3F6AF67264074F6006696CF /* Products */;
 			projectDirPath = "";
@@ -491,6 +534,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.1;
+			};
+		};
+		CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.2;
+			};
+		};
+		CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+		CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
 		CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
@@ -502,6 +577,71 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CD7F6FF8264AAD5200C337AB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		CD7F6FFE264AAD5200C337AB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		CD7F7002264AAD5200C337AB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		CD7F7005264AAE4700C337AB /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		CD7F7008264AAE8700C337AB /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		CD7F700A264AAE8700C337AB /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		CD7F700D264AAF6F00C337AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		CD9AD5D226407E7E007B509B /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */;
