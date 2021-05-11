@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReferralCodeViewController: UIViewController {
+final class ReferralCodeViewController: UIViewController {
     private let verticalPadding: CGFloat = 30.0
     
     private let referralCodeTitle: UILabel = {

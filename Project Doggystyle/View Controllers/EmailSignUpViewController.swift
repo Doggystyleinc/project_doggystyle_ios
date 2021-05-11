@@ -31,7 +31,9 @@ final class EmailSignUpViewController: UIViewController {
     
     private let emailTextField: UITextField = {
         let textField = UITextField(frame: .zero)
-        textField.borderStyle = .roundedRect
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 10.0
+        textField.setLeftPaddingPoints(10)
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Email"
         textField.keyboardType = .emailAddress
@@ -43,7 +45,9 @@ final class EmailSignUpViewController: UIViewController {
     
     private let mobileTextField: UITextField = {
         let textField = UITextField(frame: .zero)
-        textField.borderStyle = .roundedRect
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 10.0
+        textField.setLeftPaddingPoints(10)
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Mobile Number"
         textField.keyboardType = .numbersAndPunctuation
@@ -55,7 +59,9 @@ final class EmailSignUpViewController: UIViewController {
     
     private let passwordTextField: UITextField = {
         let textField = UITextField(frame: .zero)
-        textField.borderStyle = .roundedRect
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 10.0
+        textField.setLeftPaddingPoints(10)
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
@@ -68,7 +74,9 @@ final class EmailSignUpViewController: UIViewController {
     
     private let confirmPWTextField: UITextField = {
         let textField = UITextField(frame: .zero)
-        textField.borderStyle = .roundedRect
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 10.0
+        textField.setLeftPaddingPoints(10)
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Confirm Password"
         textField.isSecureTextEntry = true
@@ -81,7 +89,9 @@ final class EmailSignUpViewController: UIViewController {
     
     private let referralTextField: UITextField = {
         let textField = UITextField(frame: .zero)
-        textField.borderStyle = .roundedRect
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 10.0
+        textField.setLeftPaddingPoints(10)
         textField.backgroundColor = .textFieldBackground
         textField.placeholder = "Referral Code"
         textField.returnKeyType = .done
@@ -273,7 +283,7 @@ extension EmailSignUpViewController {
 extension EmailSignUpViewController {
     private func addTermsViews() {
         self.view.addSubview(termsTitle)
-        termsTitle.topToBottom(of: self.scrollView)
+        termsTitle.topToBottom(of: self.scrollView, offset: 15.0)
         termsTitle.left(to: self.scrollView)
         
         self.view.addSubview(termsLink)

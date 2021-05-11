@@ -21,11 +21,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: sceneWindow)
         window.makeKeyAndVisible()
         
+//        let tempVC = EmailSignInViewController()
         let decisionController = DecisionController()
         let navigationController = UINavigationController(rootViewController: decisionController)
         
         navigationController.navigationBar.isHidden = true
         navigationController.modalPresentationStyle = .fullScreen
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        appearance.shadowColor = .clear
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().tintColor = .black
         
         window.rootViewController = navigationController
         self.window = window

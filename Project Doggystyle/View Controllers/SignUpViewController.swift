@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController {
     private let verticalPadding: CGFloat = 30.0
     
     private let welcomeTitle: UILabel = {
@@ -143,7 +143,9 @@ extension SignUpViewController {
     }
     
     @objc private func presentSignIn(_ sender: UIButton) {
-        self.present(SignInViewController(), animated: true)
+        let signInVC = SignInViewController()
+        let navVC = UINavigationController(rootViewController: signInVC)
+        self.present(navVC, animated: true)
     }
     
     @objc private func didTapGoogleButton(_ sender: UIButton) {
