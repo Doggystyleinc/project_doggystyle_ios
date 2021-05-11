@@ -246,38 +246,12 @@ extension EmailSignInViewController {
     
     @objc private func keepUserLoggedIn(_ sender: UIButton) {
         print(#function)
-        
-        UIView.animate(withDuration: 0.85) {
-            if self.rememberUser == false {
-                sender.backgroundColor = .systemGreen
-                self.rememberUser = true
-            } else {
-                sender.backgroundColor = .textFieldBackground
-                self.rememberUser = false
-            }
-        }
+        self.animateRememberButton(sender)
     }
     
     @objc private func didTapForgotPassword(_ sender: UIButton) {
         print(#function)
-        
-        UIView.animate(withDuration: 0.85) {
-            if self.forgotPassword == false {
-                self.forgotPasswordButton.tintColor = .dsGrey
-                self.forgotPassword = true
-                
-                self.forgotPasswordSubTitle.layer.opacity = 1.0
-                self.forgotPasswordEmailTextField.layer.opacity = 1.0
-                self.submitButton.layer.opacity = 1.0
-            } else if self.forgotPassword == true {
-                self.forgotPasswordButton.tintColor = .textFieldBackground
-                self.forgotPassword = false
-                
-                self.forgotPasswordSubTitle.layer.opacity = 0.0
-                self.forgotPasswordEmailTextField.layer.opacity = 0.0
-                self.submitButton.layer.opacity = 0.0
-            }
-        }
+        self.animateForgotPasswordViews()
     }
 }
 
@@ -300,5 +274,41 @@ extension EmailSignInViewController {
     private func dismissKeyboardTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tapGesture)
+    }
+}
+
+
+//MARK: - Animations
+extension EmailSignInViewController {
+    private func animateForgotPasswordViews() {
+        UIView.animate(withDuration: 0.85) {
+            if self.forgotPassword == false {
+                self.forgotPasswordButton.tintColor = .dsGrey
+                self.forgotPassword = true
+                
+                self.forgotPasswordSubTitle.layer.opacity = 1.0
+                self.forgotPasswordEmailTextField.layer.opacity = 1.0
+                self.submitButton.layer.opacity = 1.0
+            } else if self.forgotPassword == true {
+                self.forgotPasswordButton.tintColor = .textFieldBackground
+                self.forgotPassword = false
+                
+                self.forgotPasswordSubTitle.layer.opacity = 0.0
+                self.forgotPasswordEmailTextField.layer.opacity = 0.0
+                self.submitButton.layer.opacity = 0.0
+            }
+        }
+    }
+    
+    private func animateRememberButton(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.85) {
+            if self.rememberUser == false {
+                sender.backgroundColor = .systemGreen
+                self.rememberUser = true
+            } else {
+                sender.backgroundColor = .textFieldBackground
+                self.rememberUser = false
+            }
+        }
     }
 }

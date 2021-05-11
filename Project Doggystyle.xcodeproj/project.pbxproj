@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7435A08EFCBE5B062D336262 /* Pods_Project_Doggystyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6301DE74708B267B6F2B37A /* Pods_Project_Doggystyle.framework */; };
 		CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD726442E5300C337AB /* SignInViewController.swift */; };
 		CD7F6FDA264435FA00C337AB /* TextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */; };
 		CD7F6FDC2644389B00C337AB /* ReferralCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FDB2644389B00C337AB /* ReferralCodeViewController.swift */; };
-		CD7F6FF3264AAD5200C337AB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */; };
-		CD7F6FF5264AAD5200C337AB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */; };
-		CD7F6FF7264AAD5200C337AB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */; };
-		CD7F6FF9264AAD5200C337AB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF8264AAD5200C337AB /* FirebaseStorage */; };
-		CD7F6FFB264AAD5200C337AB /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */; };
-		CD7F6FFD264AAD5200C337AB /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */; };
-		CD7F6FFF264AAD5200C337AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFE264AAD5200C337AB /* FirebaseAuth */; };
-		CD7F7001264AAD5200C337AB /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */; };
-		CD7F7003264AAD5200C337AB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7002264AAD5200C337AB /* FirebaseMessaging */; };
-		CD7F7006264AAE4700C337AB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7005264AAE4700C337AB /* Lottie */; };
-		CD7F7009264AAE8700C337AB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7008264AAE8700C337AB /* SDWebImage */; };
-		CD7F700B264AAE8700C337AB /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700A264AAE8700C337AB /* SDWebImageMapKit */; };
-		CD7F700E264AAF6F00C337AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700D264AAF6F00C337AB /* Alamofire */; };
+		CD7F6FF3264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF2264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F6FF5264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF4264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F6FF7264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF6264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F6FF9264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF8264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F6FFB264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFA264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F6FFD264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFC264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F6FFF264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFE264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F7001264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7000264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F7003264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7002264AAD5200C337AB /* SwiftPackageProductDependency */; };
+		CD7F7006264AAE4700C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7005264AAE4700C337AB /* SwiftPackageProductDependency */; };
+		CD7F7009264AAE8700C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7008264AAE8700C337AB /* SwiftPackageProductDependency */; };
+		CD7F700B264AAE8700C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700A264AAE8700C337AB /* SwiftPackageProductDependency */; };
+		CD7F700E264AAF6F00C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700D264AAF6F00C337AB /* SwiftPackageProductDependency */; };
 		CD7F7010264AD30300C337AB /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F700F264AD30300C337AB /* EmailSignInViewController.swift */; };
 		CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */; };
 		CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B426407D01007B509B /* UIColor+Ext.swift */; };
@@ -39,7 +40,7 @@
 		CD9AD5CD26407D40007B509B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5C126407D40007B509B /* Roboto-Medium.ttf */; };
 		CD9AD5CE26407D40007B509B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5C226407D40007B509B /* Roboto-ThinItalic.ttf */; };
 		CD9AD5D026407D53007B509B /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5CF26407D53007B509B /* ConcertOne-Regular.ttf */; };
-		CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = CD9AD5D226407E7E007B509B /* TinyConstraints */; };
+		CD9AD5D326407E7E007B509B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD9AD5D226407E7E007B509B /* SwiftPackageProductDependency */; };
 		CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D426407F2A007B509B /* SignUpViewController.swift */; };
 		CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D626408153007B509B /* HomeViewController.swift */; };
 		CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5DA26409BC2007B509B /* DSButton.swift */; };
@@ -54,6 +55,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BFBD04952AE877E3DF3CE0F /* Pods-Project Doggystyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Doggystyle.debug.xcconfig"; path = "Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle.debug.xcconfig"; sourceTree = "<group>"; };
+		636CC0061C1FA7E40F1EC151 /* Pods-Project Doggystyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project Doggystyle.release.xcconfig"; path = "Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle.release.xcconfig"; sourceTree = "<group>"; };
+		B6301DE74708B267B6F2B37A /* Pods_Project_Doggystyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_Doggystyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7F6FD726442E5300C337AB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Ext.swift"; sourceTree = "<group>"; };
 		CD7F6FDB2644389B00C337AB /* ReferralCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralCodeViewController.swift; sourceTree = "<group>"; };
@@ -93,26 +97,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7F6FF5264AAD5200C337AB /* FirebaseDatabase in Frameworks */,
-				CD7F700E264AAF6F00C337AB /* Alamofire in Frameworks */,
-				CD7F6FFD264AAD5200C337AB /* FirebaseFunctions in Frameworks */,
-				CD7F700B264AAE8700C337AB /* SDWebImageMapKit in Frameworks */,
-				CD7F7003264AAD5200C337AB /* FirebaseMessaging in Frameworks */,
-				CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */,
-				CD7F6FF7264AAD5200C337AB /* FirebaseAnalytics in Frameworks */,
-				CD7F6FFB264AAD5200C337AB /* FirebaseCrashlytics in Frameworks */,
-				CD7F7009264AAE8700C337AB /* SDWebImage in Frameworks */,
-				CD7F7006264AAE4700C337AB /* Lottie in Frameworks */,
-				CD7F7001264AAD5200C337AB /* FirebaseDynamicLinks in Frameworks */,
-				CD7F6FF9264AAD5200C337AB /* FirebaseStorage in Frameworks */,
-				CD7F6FF3264AAD5200C337AB /* FirebaseFirestore in Frameworks */,
-				CD7F6FFF264AAD5200C337AB /* FirebaseAuth in Frameworks */,
+				CD7F6FF5264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F700E264AAF6F00C337AB /* BuildFile in Frameworks */,
+				CD7F6FFD264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F700B264AAE8700C337AB /* BuildFile in Frameworks */,
+				CD7F7003264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD9AD5D326407E7E007B509B /* BuildFile in Frameworks */,
+				CD7F6FF7264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F6FFB264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F7009264AAE8700C337AB /* BuildFile in Frameworks */,
+				CD7F7006264AAE4700C337AB /* BuildFile in Frameworks */,
+				CD7F7001264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F6FF9264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F6FF3264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F6FFF264AAD5200C337AB /* BuildFile in Frameworks */,
+				7435A08EFCBE5B062D336262 /* Pods_Project_Doggystyle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F952903D6B40AE954ECC78B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6301DE74708B267B6F2B37A /* Pods_Project_Doggystyle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD9AD5B126407CCB007B509B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +187,8 @@
 			children = (
 				E3F6AF68264074F6006696CF /* Project Doggystyle */,
 				E3F6AF67264074F6006696CF /* Products */,
+				F9ABB62CBA1F70A94A064B04 /* Pods */,
+				8F952903D6B40AE954ECC78B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +238,16 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		F9ABB62CBA1F70A94A064B04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BFBD04952AE877E3DF3CE0F /* Pods-Project Doggystyle.debug.xcconfig */,
+				636CC0061C1FA7E40F1EC151 /* Pods-Project Doggystyle.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3F6AF7A264074F7006696CF /* Build configuration list for PBXNativeTarget "Project Doggystyle" */;
 			buildPhases = (
+				27208760F2E5711EA479F95C /* [CP] Check Pods Manifest.lock */,
 				E3F6AF62264074F6006696CF /* Sources */,
 				E3F6AF63264074F6006696CF /* Frameworks */,
 				E3F6AF64264074F6006696CF /* Resources */,
+				2026C9790A840C74F32BA955 /* [CP] Embed Pods Frameworks */,
+				192BBBEC2349F8C9CCEE6BAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,20 +268,20 @@
 			);
 			name = "Project Doggystyle";
 			packageProductDependencies = (
-				CD9AD5D226407E7E007B509B /* TinyConstraints */,
-				CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */,
-				CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */,
-				CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */,
-				CD7F6FF8264AAD5200C337AB /* FirebaseStorage */,
-				CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */,
-				CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */,
-				CD7F6FFE264AAD5200C337AB /* FirebaseAuth */,
-				CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */,
-				CD7F7002264AAD5200C337AB /* FirebaseMessaging */,
-				CD7F7005264AAE4700C337AB /* Lottie */,
-				CD7F7008264AAE8700C337AB /* SDWebImage */,
-				CD7F700A264AAE8700C337AB /* SDWebImageMapKit */,
-				CD7F700D264AAF6F00C337AB /* Alamofire */,
+				CD9AD5D226407E7E007B509B /* SwiftPackageProductDependency */,
+				CD7F6FF2264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F6FF4264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F6FF6264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F6FF8264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F6FFA264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F6FFC264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F6FFE264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F7000264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F7002264AAD5200C337AB /* SwiftPackageProductDependency */,
+				CD7F7005264AAE4700C337AB /* SwiftPackageProductDependency */,
+				CD7F7008264AAE8700C337AB /* SwiftPackageProductDependency */,
+				CD7F700A264AAE8700C337AB /* SwiftPackageProductDependency */,
+				CD7F700D264AAF6F00C337AB /* SwiftPackageProductDependency */,
 			);
 			productName = "Project Doggystyle";
 			productReference = E3F6AF66264074F6006696CF /* Project Doggystyle.app */;
@@ -283,11 +311,11 @@
 			);
 			mainGroup = E3F6AF5D264074F6006696CF;
 			packageReferences = (
-				CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */,
-				CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CD9AD5D126407E7E007B509B /* RemoteSwiftPackageReference */,
+				CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */,
+				CD7F7004264AAE4700C337AB /* RemoteSwiftPackageReference */,
+				CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */,
+				CD7F700C264AAF6F00C337AB /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = E3F6AF67264074F6006696CF /* Products */;
 			projectDirPath = "";
@@ -322,6 +350,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		192BBBEC2349F8C9CCEE6BAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2026C9790A840C74F32BA955 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project Doggystyle/Pods-Project Doggystyle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27208760F2E5711EA479F95C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project Doggystyle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E3F6AF62264074F6006696CF /* Sources */ = {
@@ -478,6 +565,7 @@
 		};
 		E3F6AF7B264074F7006696CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BFBD04952AE877E3DF3CE0F /* Pods-Project Doggystyle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -497,6 +585,7 @@
 		};
 		E3F6AF7C264074F7006696CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 636CC0061C1FA7E40F1EC151 /* Pods-Project Doggystyle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -538,7 +627,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -546,7 +635,7 @@
 				minimumVersion = 7.11.1;
 			};
 		};
-		CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		CD7F7004264AAE4700C337AB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -554,7 +643,7 @@
 				minimumVersion = 3.2.2;
 			};
 		};
-		CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -562,7 +651,7 @@
 				minimumVersion = 5.11.1;
 			};
 		};
-		CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		CD7F700C264AAF6F00C337AB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -570,7 +659,7 @@
 				minimumVersion = 5.4.3;
 			};
 		};
-		CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+		CD9AD5D126407E7E007B509B /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
 			requirement = {
@@ -581,74 +670,74 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */ = {
+		CD7F6FF2264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseFirestore;
 		};
-		CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */ = {
+		CD7F6FF4264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseDatabase;
 		};
-		CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */ = {
+		CD7F6FF6264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseAnalytics;
 		};
-		CD7F6FF8264AAD5200C337AB /* FirebaseStorage */ = {
+		CD7F6FF8264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseStorage;
 		};
-		CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */ = {
+		CD7F6FFA264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseCrashlytics;
 		};
-		CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */ = {
+		CD7F6FFC264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseFunctions;
 		};
-		CD7F6FFE264AAD5200C337AB /* FirebaseAuth */ = {
+		CD7F6FFE264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseAuth;
 		};
-		CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */ = {
+		CD7F7000264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseDynamicLinks;
 		};
-		CD7F7002264AAD5200C337AB /* FirebaseMessaging */ = {
+		CD7F7002264AAD5200C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
 			productName = FirebaseMessaging;
 		};
-		CD7F7005264AAE4700C337AB /* Lottie */ = {
+		CD7F7005264AAE4700C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = CD7F7004264AAE4700C337AB /* RemoteSwiftPackageReference */;
 			productName = Lottie;
 		};
-		CD7F7008264AAE8700C337AB /* SDWebImage */ = {
+		CD7F7008264AAE8700C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */;
 			productName = SDWebImage;
 		};
-		CD7F700A264AAE8700C337AB /* SDWebImageMapKit */ = {
+		CD7F700A264AAE8700C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */;
 			productName = SDWebImageMapKit;
 		};
-		CD7F700D264AAF6F00C337AB /* Alamofire */ = {
+		CD7F700D264AAF6F00C337AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = CD7F700C264AAF6F00C337AB /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		CD9AD5D226407E7E007B509B /* TinyConstraints */ = {
+		CD9AD5D226407E7E007B509B /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			package = CD9AD5D126407E7E007B509B /* RemoteSwiftPackageReference */;
 			productName = TinyConstraints;
 		};
 /* End XCSwiftPackageProductDependency section */
