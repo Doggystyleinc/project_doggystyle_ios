@@ -284,7 +284,7 @@ extension EmailSignUpViewController {
     private func addTermsViews() {
         self.view.addSubview(termsTitle)
         termsTitle.topToBottom(of: self.scrollView, offset: 15.0)
-        termsTitle.left(to: self.scrollView)
+        termsTitle.left(to: self.scrollView, offset: 11)
         
         self.view.addSubview(termsLink)
         termsLink.top(to: termsTitle)
@@ -302,8 +302,8 @@ extension EmailSignUpViewController {
 extension EmailSignUpViewController {
     private func addSignUpButton() {
         self.view.addSubview(signUpButton)
-        signUpButton.topToBottom(of: termsTitle, offset: 80)
         signUpButton.height(44)
+        signUpButton.bottom(to: self.view, offset: -50)
         signUpButton.left(to: self.view, offset: verticalPadding)
         signUpButton.right(to: self.view, offset: -verticalPadding)
     }
@@ -327,12 +327,14 @@ extension EmailSignUpViewController {
     @objc private func agreeToTerms(_ sender: UIButton) {
         print(#function)
         
-        if didAgreeToTerms == false {
-            sender.backgroundColor = .systemGreen
-            didAgreeToTerms = true
-        } else {
-            sender.backgroundColor = .textFieldBackground
-            didAgreeToTerms = false
+        UIView.animate(withDuration: 0.85) {
+            if self.didAgreeToTerms == false {
+                sender.backgroundColor = .systemGreen
+                self.didAgreeToTerms = true
+            } else {
+                sender.backgroundColor = .textFieldBackground
+                self.didAgreeToTerms = false
+            }
         }
     }
     

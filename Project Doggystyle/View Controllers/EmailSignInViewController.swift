@@ -10,6 +10,7 @@ import UIKit
 final class EmailSignInViewController: UIViewController {
     private let verticalPadding: CGFloat = 30.0
     private var rememberUser = false
+    private var forgotPassword = false
     
     private let welcomeTitle: UILabel = {
         let label = UILabel(frame: .zero)
@@ -86,9 +87,39 @@ final class EmailSignInViewController: UIViewController {
         return button
     }()
     
+    private let forgotPasswordSubTitle: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.text = "Enter the email associated with your account and we'll send you password reset instructions."
+        label.numberOfLines = 2
+        label.font = UIFont.robotoRegular(size: 15)
+        label.tintColor = .textColor
+        label.layer.opacity = 0.0
+        return label
+    }()
+    
+    private let forgotPasswordEmailTextField: UITextField = {
+        let textField = UITextField(frame: .zero)
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 10.0
+        textField.setLeftPaddingPoints(10)
+        textField.backgroundColor = .textFieldBackground
+        textField.placeholder = "Email"
+        textField.keyboardType = .emailAddress
+        textField.returnKeyType = .done
+        textField.layer.opacity = 0.0
+        return textField
+    }()
+    
     private let signInButton: DSButton = {
         let button = DSButton(titleText: "Sign In", backgroundColor: .dsGrey, titleColor: .white)
         button.addTarget(self, action: #selector(didTapSignIn(_:)), for: .touchUpInside)
+        return button
+    }()
+    
+    private let submitButton: DSButton = {
+        let button = DSButton(text: "Submit")
+        button.layer.opacity = 0.0
+        button.addTarget(self, action: #selector(didTapSubmit(_:)), for: .touchUpInside)
         return button
     }()
 
@@ -99,6 +130,7 @@ final class EmailSignInViewController: UIViewController {
         self.addWelcomeViews()
         self.addTextFields()
         self.addFooterViews()
+        self.addForgotPasswordViews()
     }
 }
 
@@ -160,6 +192,18 @@ extension EmailSignInViewController {
         rememberUserButton.height(22)
         rememberUserButton.width(22)
         
+        self.view.addSubview(signInButton)
+        signInButton.height(44)
+        signInButton.left(to: self.view, offset: verticalPadding)
+        signInButton.right(to: self.view, offset: -verticalPadding)
+        signInButton.bottom(to: self.view, offset: -50)
+    }
+}
+
+
+//MARK: - Configure Forgot Password Views
+extension EmailSignInViewController {
+    private func addForgotPasswordViews() {
         self.view.addSubview(forgotPasswordTitle)
         forgotPasswordTitle.topToBottom(of: self.rememberUserButton, offset: 25.0)
         forgotPasswordTitle.height(44.0)
@@ -171,14 +215,24 @@ extension EmailSignInViewController {
         forgotPasswordButton.height(24)
         forgotPasswordButton.width(24)
         
-        self.view.addSubview(signInButton)
-        signInButton.height(44)
-        signInButton.left(to: self.view, offset: verticalPadding)
-        signInButton.right(to: self.view, offset: -verticalPadding)
-        signInButton.bottom(to: self.view, offset: -50)
+        self.view.addSubview(forgotPasswordSubTitle)
+        forgotPasswordSubTitle.topToBottom(of: self.forgotPasswordTitle, offset: 20.0)
+        forgotPasswordSubTitle.left(to: self.view, offset: verticalPadding)
+        forgotPasswordSubTitle.right(to: self.view, offset: -verticalPadding)
+        
+        self.view.addSubview(forgotPasswordEmailTextField)
+        forgotPasswordEmailTextField.height(44)
+        forgotPasswordEmailTextField.topToBottom(of: self.forgotPasswordSubTitle, offset: 20.0)
+        forgotPasswordEmailTextField.left(to: self.view, offset: verticalPadding)
+        forgotPasswordEmailTextField.right(to: self.view, offset: -verticalPadding)
+        
+        self.view.addSubview(submitButton)
+        submitButton.height(44)
+        submitButton.topToBottom(of: self.forgotPasswordEmailTextField, offset: 20.0)
+        submitButton.left(to: self.view, offset: verticalPadding)
+        submitButton.right(to: self.view, offset: -verticalPadding)
     }
 }
-
 
 //MARK: - @ojbc Functions
 extension EmailSignInViewController {
@@ -186,20 +240,44 @@ extension EmailSignInViewController {
         print(#function)
     }
     
+    @objc private func didTapSubmit(_ sender: UIButton) {
+        print(#function)
+    }
+    
     @objc private func keepUserLoggedIn(_ sender: UIButton) {
         print(#function)
         
-        if rememberUser == false {
-            sender.backgroundColor = .systemGreen
-            rememberUser = true
-        } else {
-            sender.backgroundColor = .textFieldBackground
-            rememberUser = false
+        UIView.animate(withDuration: 0.85) {
+            if self.rememberUser == false {
+                sender.backgroundColor = .systemGreen
+                self.rememberUser = true
+            } else {
+                sender.backgroundColor = .textFieldBackground
+                self.rememberUser = false
+            }
         }
     }
     
     @objc private func didTapForgotPassword(_ sender: UIButton) {
         print(#function)
+        
+        UIView.animate(withDuration: 0.85) {
+            if self.forgotPassword == false {
+                self.forgotPasswordButton.tintColor = .dsGrey
+                self.forgotPassword = true
+                
+                self.forgotPasswordSubTitle.layer.opacity = 1.0
+                self.forgotPasswordEmailTextField.layer.opacity = 1.0
+                self.submitButton.layer.opacity = 1.0
+            } else if self.forgotPassword == true {
+                self.forgotPasswordButton.tintColor = .textFieldBackground
+                self.forgotPassword = false
+                
+                self.forgotPasswordSubTitle.layer.opacity = 0.0
+                self.forgotPasswordEmailTextField.layer.opacity = 0.0
+                self.submitButton.layer.opacity = 0.0
+            }
+        }
     }
 }
 
