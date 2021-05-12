@@ -11,6 +11,8 @@ final class EmailSignInViewController: UIViewController {
     private let verticalPadding: CGFloat = 30.0
     private var rememberUser = false
     private var forgotPassword = false
+    private var scrollView = UIScrollView(frame: .zero)
+    private let containerView = UIView(frame: .zero)
     
     private let welcomeTitle: UILabel = {
         let label = UILabel(frame: .zero)
@@ -128,6 +130,7 @@ final class EmailSignInViewController: UIViewController {
         self.configureVC()
         self.dismissKeyboardTapGesture()
         self.addWelcomeViews()
+        self.addScrollView()
         self.addTextFields()
         self.addFooterViews()
         self.addForgotPasswordViews()
@@ -141,6 +144,14 @@ extension EmailSignInViewController {
         self.view.backgroundColor = .white
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
+        self.forgotPasswordEmailTextField.delegate = self
+        self.scrollView.showsVerticalScrollIndicator = false
+        
+        self.view.addSubview(signInButton)
+        signInButton.height(44)
+        signInButton.left(to: self.view, offset: verticalPadding)
+        signInButton.right(to: self.view, offset: -verticalPadding)
+        signInButton.bottom(to: self.view, offset: -50)
     }
 }
 
@@ -161,42 +172,55 @@ extension EmailSignInViewController {
 }
 
 
+//MARK: - Configure Scroll Views
+extension EmailSignInViewController {
+    private func addScrollView() {
+        self.view.addSubview(scrollView)
+        scrollView.topToBottom(of: dividerView)
+        scrollView.left(to: self.view, offset: verticalPadding)
+        scrollView.right(to: self.view, offset: -verticalPadding)
+        scrollView.height(490)
+        
+        self.scrollView.addSubview(containerView)
+        containerView.edgesToSuperview()
+        containerView.width(to: self.scrollView)
+        containerView.height(510)
+    }
+}
+
+
 //MARK: - Configure Text Fields
 extension EmailSignInViewController {
     private func addTextFields() {
-        self.view.addSubview(emailTextField)
-        emailTextField.topToBottom(of: self.dividerView, offset: 30.0)
+        self.containerView.addSubview(emailTextField)
+        emailTextField.top(to: self.containerView, offset: 20)
         emailTextField.height(44.0)
-        emailTextField.left(to: self.view, offset: verticalPadding)
-        emailTextField.right(to: self.view, offset: -verticalPadding)
+        emailTextField.left(to: self.containerView)
+        emailTextField.right(to: self.containerView)
         
-        self.view.addSubview(passwordTextField)
+        self.containerView.addSubview(passwordTextField)
+        self.passwordTextField.enablePasswordToggle()
+        
         passwordTextField.topToBottom(of: self.emailTextField, offset: 20.0)
         passwordTextField.height(44.0)
-        passwordTextField.left(to: self.view, offset: verticalPadding)
-        passwordTextField.right(to: self.view, offset: -verticalPadding)
+        passwordTextField.left(to: self.containerView)
+        passwordTextField.right(to: self.containerView)
     }
 }
 
 //MARK: - Configure Footer Views
 extension EmailSignInViewController {
     private func addFooterViews() {
-        self.view.addSubview(rememberTitle)
-        rememberTitle.topToBottom(of: self.passwordTextField, offset: 25.0)
+        self.containerView.addSubview(rememberTitle)
+        rememberTitle.topToBottom(of: self.passwordTextField, offset: 20.0)
         rememberTitle.height(44.0)
-        rememberTitle.left(to: self.view, offset: verticalPadding)
+        rememberTitle.left(to: self.containerView, offset: 11)
         
-        self.view.addSubview(rememberUserButton)
+        self.containerView.addSubview(rememberUserButton)
         rememberUserButton.centerY(to: self.rememberTitle)
         rememberUserButton.right(to: self.passwordTextField, offset: -11)
         rememberUserButton.height(22)
         rememberUserButton.width(22)
-        
-        self.view.addSubview(signInButton)
-        signInButton.height(44)
-        signInButton.left(to: self.view, offset: verticalPadding)
-        signInButton.right(to: self.view, offset: -verticalPadding)
-        signInButton.bottom(to: self.view, offset: -50)
     }
 }
 
@@ -204,33 +228,33 @@ extension EmailSignInViewController {
 //MARK: - Configure Forgot Password Views
 extension EmailSignInViewController {
     private func addForgotPasswordViews() {
-        self.view.addSubview(forgotPasswordTitle)
-        forgotPasswordTitle.topToBottom(of: self.rememberUserButton, offset: 25.0)
+        self.containerView.addSubview(forgotPasswordTitle)
+        forgotPasswordTitle.topToBottom(of: self.rememberUserButton, offset: 20.0)
         forgotPasswordTitle.height(44.0)
-        forgotPasswordTitle.left(to: self.view, offset: verticalPadding)
+        forgotPasswordTitle.left(to: self.containerView, offset: 11)
         
-        self.view.addSubview(forgotPasswordButton)
+        self.containerView.addSubview(forgotPasswordButton)
         forgotPasswordButton.centerY(to: self.forgotPasswordTitle)
         forgotPasswordButton.right(to: self.passwordTextField, offset: -11)
         forgotPasswordButton.height(24)
         forgotPasswordButton.width(24)
         
-        self.view.addSubview(forgotPasswordSubTitle)
+        self.containerView.addSubview(forgotPasswordSubTitle)
         forgotPasswordSubTitle.topToBottom(of: self.forgotPasswordTitle, offset: 20.0)
-        forgotPasswordSubTitle.left(to: self.view, offset: verticalPadding)
-        forgotPasswordSubTitle.right(to: self.view, offset: -verticalPadding)
+        forgotPasswordSubTitle.left(to: self.containerView, offset: 8)
+        forgotPasswordSubTitle.right(to: self.containerView, offset: -8)
         
-        self.view.addSubview(forgotPasswordEmailTextField)
+        self.containerView.addSubview(forgotPasswordEmailTextField)
         forgotPasswordEmailTextField.height(44)
         forgotPasswordEmailTextField.topToBottom(of: self.forgotPasswordSubTitle, offset: 20.0)
-        forgotPasswordEmailTextField.left(to: self.view, offset: verticalPadding)
-        forgotPasswordEmailTextField.right(to: self.view, offset: -verticalPadding)
+        forgotPasswordEmailTextField.left(to: self.forgotPasswordSubTitle)
+        forgotPasswordEmailTextField.right(to: self.forgotPasswordSubTitle)
         
-        self.view.addSubview(submitButton)
+        self.containerView.addSubview(submitButton)
         submitButton.height(44)
         submitButton.topToBottom(of: self.forgotPasswordEmailTextField, offset: 20.0)
-        submitButton.left(to: self.view, offset: verticalPadding)
-        submitButton.right(to: self.view, offset: -verticalPadding)
+        submitButton.left(to: self.forgotPasswordSubTitle)
+        submitButton.right(to: self.forgotPasswordSubTitle)
     }
 }
 
@@ -246,12 +270,14 @@ extension EmailSignInViewController {
     
     @objc private func keepUserLoggedIn(_ sender: UIButton) {
         print(#function)
+        //Store in User Defaults
         self.animateRememberButton(sender)
     }
     
     @objc private func didTapForgotPassword(_ sender: UIButton) {
         print(#function)
         self.animateForgotPasswordViews()
+        self.forgotPasswordEmailTextField.resignFirstResponder()
     }
 }
 
@@ -263,6 +289,7 @@ extension EmailSignInViewController: UITextFieldDelegate {
             nextTextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
+            scrollView.setContentOffset(.zero, animated: true)
         }
         return false
     }
