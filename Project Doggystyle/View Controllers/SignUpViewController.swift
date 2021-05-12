@@ -139,7 +139,8 @@ extension SignUpViewController {
 //MARK: - @objc Functions
 extension SignUpViewController {
     @objc private func presentEmailSignUp(_ sender: UIButton) {
-        self.present(EmailSignUpViewController(), animated: true)
+        let emailSignUpVC = EmailSignUpViewController()
+        self.navigationController?.pushViewController(emailSignUpVC, animated: true)
     }
     
     @objc private func presentSignIn(_ sender: UIButton) {

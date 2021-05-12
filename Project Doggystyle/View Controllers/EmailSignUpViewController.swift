@@ -21,14 +21,6 @@ final class EmailSignUpViewController: UIViewController {
         return label
     }()
     
-    private let closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
-        button.tintColor = .headerColor
-        button.addTarget(self, action: #selector(dismissVC(_:)), for: .touchUpInside)
-        return button
-    }()
-    
     private let emailTextField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.borderStyle = .none
@@ -191,7 +183,7 @@ extension EmailSignUpViewController {
 extension EmailSignUpViewController {
     private func addTitleViews() {
         self.view.addSubview(signUpTitle)
-        signUpTitle.top(to: self.view, offset: 80.0)
+        signUpTitle.top(to: self.view, offset: 100.0)
         signUpTitle.left(to: self.view, offset: verticalPadding)
         
         self.view.addSubview(dividerView)
@@ -199,12 +191,6 @@ extension EmailSignUpViewController {
         dividerView.topToBottom(of: self.signUpTitle, offset: 20.0)
         dividerView.left(to: self.view, offset: verticalPadding)
         dividerView.right(to: self.view, offset: -verticalPadding)
-        
-        self.view.addSubview(closeButton)
-        closeButton.height(60)
-        closeButton.width(60)
-        closeButton.top(to: self.view, offset: 5.0)
-        closeButton.right(to: self.view, offset: -5.0)
     }
 }
 
@@ -220,7 +206,7 @@ extension EmailSignUpViewController {
         self.scrollView.addSubview(containerView)
         containerView.edgesToSuperview()
         containerView.width(to: self.scrollView)
-        containerView.height(450)
+        containerView.height(400)
     }
 }
 
@@ -347,15 +333,10 @@ extension EmailSignUpViewController {
     }
     
     @objc func adjustForKeyboard(notification: Notification) {
-        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        
-        let keyboardScreenEndFrame = keyboardValue.cgRectValue
-        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
-        
         if notification.name == UIResponder.keyboardWillHideNotification {
             scrollView.contentInset = .zero
         } else {
-            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
         }
         
         scrollView.scrollIndicatorInsets = scrollView.contentInset
@@ -369,6 +350,7 @@ extension EmailSignUpViewController: UITextFieldDelegate {
             nextTextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
+            //Auto scroll to the top
             scrollView.setContentOffset(.zero, animated: true)
         }
         return false

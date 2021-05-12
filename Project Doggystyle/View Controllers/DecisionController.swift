@@ -66,8 +66,6 @@ extension DecisionController {
     @objc func presentSignUpController() {
         let signUpVC = SignUpViewController()
         let navVC = UINavigationController(rootViewController: signUpVC)
-        
-        navVC.navigationBar.isHidden = true
         navVC.modalPresentationStyle = .fullScreen
         self.navigationController?.present(navVC, animated: true)
     }
