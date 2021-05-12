@@ -109,6 +109,7 @@ final class EmailSignInViewController: UIViewController {
         textField.keyboardType = .emailAddress
         textField.returnKeyType = .done
         textField.layer.opacity = 0.0
+        textField.tag = 3
         return textField
     }()
     
@@ -128,6 +129,7 @@ final class EmailSignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureVC()
+        self.observeForKeyboard()
         self.dismissKeyboardTapGesture()
         self.addWelcomeViews()
         self.addScrollView()
@@ -184,7 +186,7 @@ extension EmailSignInViewController {
         self.scrollView.addSubview(containerView)
         containerView.edgesToSuperview()
         containerView.width(to: self.scrollView)
-        containerView.height(510)
+        containerView.height(590)
     }
 }
 
@@ -279,6 +281,21 @@ extension EmailSignInViewController {
         self.animateForgotPasswordViews()
         self.forgotPasswordEmailTextField.resignFirstResponder()
     }
+    
+    @objc func adjustForKeyboard(notification: Notification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            scrollView.contentInset = .zero
+        } else {
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+        }
+        
+        scrollView.scrollIndicatorInsets = scrollView.contentInset
+    }
 }
 
 
@@ -301,6 +318,16 @@ extension EmailSignInViewController {
     private func dismissKeyboardTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tapGesture)
+    }
+}
+
+
+//MARK: - Adjust Scrollview for Keyboard
+extension EmailSignInViewController {
+    private func observeForKeyboard() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 }
 
