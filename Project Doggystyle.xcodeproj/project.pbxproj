@@ -11,20 +11,24 @@
 		CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD726442E5300C337AB /* SignInViewController.swift */; };
 		CD7F6FDA264435FA00C337AB /* TextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */; };
 		CD7F6FDC2644389B00C337AB /* ReferralCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F6FDB2644389B00C337AB /* ReferralCodeViewController.swift */; };
-		CD7F6FF3264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF2264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F6FF5264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF4264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F6FF7264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF6264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F6FF9264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF8264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F6FFB264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFA264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F6FFD264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFC264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F6FFF264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFE264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F7001264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7000264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F7003264AAD5200C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7002264AAD5200C337AB /* SwiftPackageProductDependency */; };
-		CD7F7006264AAE4700C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7005264AAE4700C337AB /* SwiftPackageProductDependency */; };
-		CD7F7009264AAE8700C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7008264AAE8700C337AB /* SwiftPackageProductDependency */; };
-		CD7F700B264AAE8700C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700A264AAE8700C337AB /* SwiftPackageProductDependency */; };
-		CD7F700E264AAF6F00C337AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700D264AAF6F00C337AB /* SwiftPackageProductDependency */; };
+		CD7F6FF3264AAD5200C337AB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */; };
+		CD7F6FF5264AAD5200C337AB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */; };
+		CD7F6FF7264AAD5200C337AB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */; };
+		CD7F6FF9264AAD5200C337AB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FF8264AAD5200C337AB /* FirebaseStorage */; };
+		CD7F6FFB264AAD5200C337AB /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */; };
+		CD7F6FFD264AAD5200C337AB /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */; };
+		CD7F6FFF264AAD5200C337AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F6FFE264AAD5200C337AB /* FirebaseAuth */; };
+		CD7F7001264AAD5200C337AB /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */; };
+		CD7F7003264AAD5200C337AB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7002264AAD5200C337AB /* FirebaseMessaging */; };
+		CD7F7006264AAE4700C337AB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7005264AAE4700C337AB /* Lottie */; };
+		CD7F7009264AAE8700C337AB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F7008264AAE8700C337AB /* SDWebImage */; };
+		CD7F700B264AAE8700C337AB /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700A264AAE8700C337AB /* SDWebImageMapKit */; };
+		CD7F700E264AAF6F00C337AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD7F700D264AAF6F00C337AB /* Alamofire */; };
 		CD7F7010264AD30300C337AB /* EmailSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F700F264AD30300C337AB /* EmailSignInViewController.swift */; };
+		CD7F7012264C4CD600C337AB /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7011264C4CD600C337AB /* InstructionsViewController.swift */; };
+		CD7F7016264D5B5100C337AB /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7015264D5B5100C337AB /* UIViewController+Ext.swift */; };
+		CD7F7018264D5C5F00C337AB /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F7017264D5C5F00C337AB /* ResetPasswordViewController.swift */; };
+		CD7F701C264D650000C337AB /* SuccessfulPasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7F701B264D650000C337AB /* SuccessfulPasswordResetViewController.swift */; };
 		CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */; };
 		CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5B426407D01007B509B /* UIColor+Ext.swift */; };
 		CD9AD5C326407D40007B509B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */; };
@@ -40,7 +44,7 @@
 		CD9AD5CD26407D40007B509B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5C126407D40007B509B /* Roboto-Medium.ttf */; };
 		CD9AD5CE26407D40007B509B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5C226407D40007B509B /* Roboto-ThinItalic.ttf */; };
 		CD9AD5D026407D53007B509B /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD9AD5CF26407D53007B509B /* ConcertOne-Regular.ttf */; };
-		CD9AD5D326407E7E007B509B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD9AD5D226407E7E007B509B /* SwiftPackageProductDependency */; };
+		CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = CD9AD5D226407E7E007B509B /* TinyConstraints */; };
 		CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D426407F2A007B509B /* SignUpViewController.swift */; };
 		CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5D626408153007B509B /* HomeViewController.swift */; };
 		CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5DA26409BC2007B509B /* DSButton.swift */; };
@@ -62,6 +66,10 @@
 		CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Ext.swift"; sourceTree = "<group>"; };
 		CD7F6FDB2644389B00C337AB /* ReferralCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralCodeViewController.swift; sourceTree = "<group>"; };
 		CD7F700F264AD30300C337AB /* EmailSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInViewController.swift; sourceTree = "<group>"; };
+		CD7F7011264C4CD600C337AB /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		CD7F7015264D5B5100C337AB /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		CD7F7017264D5C5F00C337AB /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		CD7F701B264D650000C337AB /* SuccessfulPasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulPasswordResetViewController.swift; sourceTree = "<group>"; };
 		CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		CD9AD5B426407D01007B509B /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		CD9AD5B726407D3F007B509B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -97,20 +105,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7F6FF5264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD7F700E264AAF6F00C337AB /* BuildFile in Frameworks */,
-				CD7F6FFD264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD7F700B264AAE8700C337AB /* BuildFile in Frameworks */,
-				CD7F7003264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD9AD5D326407E7E007B509B /* BuildFile in Frameworks */,
-				CD7F6FF7264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD7F6FFB264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD7F7009264AAE8700C337AB /* BuildFile in Frameworks */,
-				CD7F7006264AAE4700C337AB /* BuildFile in Frameworks */,
-				CD7F7001264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD7F6FF9264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD7F6FF3264AAD5200C337AB /* BuildFile in Frameworks */,
-				CD7F6FFF264AAD5200C337AB /* BuildFile in Frameworks */,
+				CD7F6FF5264AAD5200C337AB /* FirebaseDatabase in Frameworks */,
+				CD7F700E264AAF6F00C337AB /* Alamofire in Frameworks */,
+				CD7F6FFD264AAD5200C337AB /* FirebaseFunctions in Frameworks */,
+				CD7F700B264AAE8700C337AB /* SDWebImageMapKit in Frameworks */,
+				CD7F7003264AAD5200C337AB /* FirebaseMessaging in Frameworks */,
+				CD9AD5D326407E7E007B509B /* TinyConstraints in Frameworks */,
+				CD7F6FF7264AAD5200C337AB /* FirebaseAnalytics in Frameworks */,
+				CD7F6FFB264AAD5200C337AB /* FirebaseCrashlytics in Frameworks */,
+				CD7F7009264AAE8700C337AB /* SDWebImage in Frameworks */,
+				CD7F7006264AAE4700C337AB /* Lottie in Frameworks */,
+				CD7F7001264AAD5200C337AB /* FirebaseDynamicLinks in Frameworks */,
+				CD7F6FF9264AAD5200C337AB /* FirebaseStorage in Frameworks */,
+				CD7F6FF3264AAD5200C337AB /* FirebaseFirestore in Frameworks */,
+				CD7F6FFF264AAD5200C337AB /* FirebaseAuth in Frameworks */,
 				7435A08EFCBE5B062D336262 /* Pods_Project_Doggystyle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +134,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD7F7019264D645700C337AB /* Resetting Password */ = {
+			isa = PBXGroup;
+			children = (
+				CD7F7011264C4CD600C337AB /* InstructionsViewController.swift */,
+				CD7F7017264D5C5F00C337AB /* ResetPasswordViewController.swift */,
+				CD7F701B264D650000C337AB /* SuccessfulPasswordResetViewController.swift */,
+			);
+			path = "Resetting Password";
+			sourceTree = "<group>";
+		};
+		CD7F701A264D649100C337AB /* Sign Up + Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				CD9AD5D426407F2A007B509B /* SignUpViewController.swift */,
+				CD9AD5EA26419B59007B509B /* EmailSignUpViewController.swift */,
+				CD7F6FDB2644389B00C337AB /* ReferralCodeViewController.swift */,
+				CD7F700F264AD30300C337AB /* EmailSignInViewController.swift */,
+				CD7F6FD726442E5300C337AB /* SignInViewController.swift */,
+			);
+			path = "Sign Up + Sign In";
+			sourceTree = "<group>";
+		};
 		CD9AD5B126407CCB007B509B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +163,7 @@
 				CD9AD5B426407D01007B509B /* UIColor+Ext.swift */,
 				CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */,
 				CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */,
+				CD7F7015264D5B5100C337AB /* UIViewController+Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -227,13 +258,10 @@
 		E3F6AF812640753F006696CF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CD9AD5D426407F2A007B509B /* SignUpViewController.swift */,
+				CD7F701A264D649100C337AB /* Sign Up + Sign In */,
+				CD7F7019264D645700C337AB /* Resetting Password */,
 				E3F6AF6D264074F6006696CF /* DecisionController.swift */,
 				CD9AD5D626408153007B509B /* HomeViewController.swift */,
-				CD9AD5EA26419B59007B509B /* EmailSignUpViewController.swift */,
-				CD7F6FD726442E5300C337AB /* SignInViewController.swift */,
-				CD7F6FDB2644389B00C337AB /* ReferralCodeViewController.swift */,
-				CD7F700F264AD30300C337AB /* EmailSignInViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -244,7 +272,6 @@
 				0BFBD04952AE877E3DF3CE0F /* Pods-Project Doggystyle.debug.xcconfig */,
 				636CC0061C1FA7E40F1EC151 /* Pods-Project Doggystyle.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -268,20 +295,20 @@
 			);
 			name = "Project Doggystyle";
 			packageProductDependencies = (
-				CD9AD5D226407E7E007B509B /* SwiftPackageProductDependency */,
-				CD7F6FF2264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F6FF4264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F6FF6264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F6FF8264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F6FFA264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F6FFC264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F6FFE264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F7000264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F7002264AAD5200C337AB /* SwiftPackageProductDependency */,
-				CD7F7005264AAE4700C337AB /* SwiftPackageProductDependency */,
-				CD7F7008264AAE8700C337AB /* SwiftPackageProductDependency */,
-				CD7F700A264AAE8700C337AB /* SwiftPackageProductDependency */,
-				CD7F700D264AAF6F00C337AB /* SwiftPackageProductDependency */,
+				CD9AD5D226407E7E007B509B /* TinyConstraints */,
+				CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */,
+				CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */,
+				CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */,
+				CD7F6FF8264AAD5200C337AB /* FirebaseStorage */,
+				CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */,
+				CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */,
+				CD7F6FFE264AAD5200C337AB /* FirebaseAuth */,
+				CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */,
+				CD7F7002264AAD5200C337AB /* FirebaseMessaging */,
+				CD7F7005264AAE4700C337AB /* Lottie */,
+				CD7F7008264AAE8700C337AB /* SDWebImage */,
+				CD7F700A264AAE8700C337AB /* SDWebImageMapKit */,
+				CD7F700D264AAF6F00C337AB /* Alamofire */,
 			);
 			productName = "Project Doggystyle";
 			productReference = E3F6AF66264074F6006696CF /* Project Doggystyle.app */;
@@ -311,11 +338,11 @@
 			);
 			mainGroup = E3F6AF5D264074F6006696CF;
 			packageReferences = (
-				CD9AD5D126407E7E007B509B /* RemoteSwiftPackageReference */,
-				CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */,
-				CD7F7004264AAE4700C337AB /* RemoteSwiftPackageReference */,
-				CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */,
-				CD7F700C264AAF6F00C337AB /* RemoteSwiftPackageReference */,
+				CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = E3F6AF67264074F6006696CF /* Products */;
 			projectDirPath = "";
@@ -417,18 +444,22 @@
 			files = (
 				CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */,
 				CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */,
+				CD7F7016264D5B5100C337AB /* UIViewController+Ext.swift in Sources */,
 				CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */,
 				CD9AD5E12640A544007B509B /* DividerView.swift in Sources */,
 				CD7F6FDA264435FA00C337AB /* TextField+Ext.swift in Sources */,
 				CDA5F62B2642F71E00EF5A49 /* String + Ext.swift in Sources */,
 				E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */,
 				CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */,
+				CD7F7018264D5C5F00C337AB /* ResetPasswordViewController.swift in Sources */,
 				CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */,
 				CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */,
 				E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */,
 				E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */,
 				CD7F7010264AD30300C337AB /* EmailSignInViewController.swift in Sources */,
+				CD7F701C264D650000C337AB /* SuccessfulPasswordResetViewController.swift in Sources */,
 				CD7F6FDC2644389B00C337AB /* ReferralCodeViewController.swift in Sources */,
+				CD7F7012264C4CD600C337AB /* InstructionsViewController.swift in Sources */,
 				CD9AD5EB26419B59007B509B /* EmailSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,7 +601,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N29F9HMKW5;
+				DEVELOPMENT_TEAM = F5J6ZLKCR8;
 				INFOPLIST_FILE = "Project Doggystyle/Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,7 +621,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N29F9HMKW5;
+				DEVELOPMENT_TEAM = F5J6ZLKCR8;
 				INFOPLIST_FILE = "Project Doggystyle/Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -627,7 +658,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */ = {
+		CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -635,7 +666,7 @@
 				minimumVersion = 7.11.1;
 			};
 		};
-		CD7F7004264AAE4700C337AB /* RemoteSwiftPackageReference */ = {
+		CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -643,7 +674,7 @@
 				minimumVersion = 3.2.2;
 			};
 		};
-		CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */ = {
+		CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -651,7 +682,7 @@
 				minimumVersion = 5.11.1;
 			};
 		};
-		CD7F700C264AAF6F00C337AB /* RemoteSwiftPackageReference */ = {
+		CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -659,7 +690,7 @@
 				minimumVersion = 5.4.3;
 			};
 		};
-		CD9AD5D126407E7E007B509B /* RemoteSwiftPackageReference */ = {
+		CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
 			requirement = {
@@ -670,74 +701,74 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD7F6FF2264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F6FF2264AAD5200C337AB /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		CD7F6FF4264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F6FF4264AAD5200C337AB /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		CD7F6FF6264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F6FF6264AAD5200C337AB /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		CD7F6FF8264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F6FF8264AAD5200C337AB /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
-		CD7F6FFA264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F6FFA264AAD5200C337AB /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
-		CD7F6FFC264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F6FFC264AAD5200C337AB /* FirebaseFunctions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
 		};
-		CD7F6FFE264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F6FFE264AAD5200C337AB /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		CD7F7000264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F7000264AAD5200C337AB /* FirebaseDynamicLinks */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDynamicLinks;
 		};
-		CD7F7002264AAD5200C337AB /* SwiftPackageProductDependency */ = {
+		CD7F7002264AAD5200C337AB /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F6FF1264AAD5200C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F6FF1264AAD5200C337AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
 		};
-		CD7F7005264AAE4700C337AB /* SwiftPackageProductDependency */ = {
+		CD7F7005264AAE4700C337AB /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F7004264AAE4700C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F7004264AAE4700C337AB /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		CD7F7008264AAE8700C337AB /* SwiftPackageProductDependency */ = {
+		CD7F7008264AAE8700C337AB /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		CD7F700A264AAE8700C337AB /* SwiftPackageProductDependency */ = {
+		CD7F700A264AAE8700C337AB /* SDWebImageMapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F7007264AAE8700C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F7007264AAE8700C337AB /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
 		};
-		CD7F700D264AAF6F00C337AB /* SwiftPackageProductDependency */ = {
+		CD7F700D264AAF6F00C337AB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD7F700C264AAF6F00C337AB /* RemoteSwiftPackageReference */;
+			package = CD7F700C264AAF6F00C337AB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		CD9AD5D226407E7E007B509B /* SwiftPackageProductDependency */ = {
+		CD9AD5D226407E7E007B509B /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD9AD5D126407E7E007B509B /* RemoteSwiftPackageReference */;
+			package = CD9AD5D126407E7E007B509B /* XCRemoteSwiftPackageReference "TinyConstraints" */;
 			productName = TinyConstraints;
 		};
 /* End XCSwiftPackageProductDependency section */

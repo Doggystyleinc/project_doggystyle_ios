@@ -46,10 +46,10 @@ final class ReferralCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        dismissKeyboardTapGesture()
-        addTitleViews()
-        addTextField()
-        addSignUpButton()
+        self.dismissKeyboardTapGesture()
+        self.addTitleViews()
+        self.addTextField()
+        self.addSignUpButton()
     }
     
 }
@@ -103,10 +103,3 @@ extension ReferralCodeViewController {
     }
 }
 
-//MARK: - Tap Anywhere To Dismiss Keyboard
-extension ReferralCodeViewController {
-    private func dismissKeyboardTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        self.view.addGestureRecognizer(tapGesture)
-    }
-}

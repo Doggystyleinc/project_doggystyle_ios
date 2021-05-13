@@ -268,11 +268,16 @@ extension EmailSignInViewController {
     
     @objc private func didTapSubmit(_ sender: UIButton) {
         print(#function)
+        showLoadingView()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.dismissLoadingView()
+            self.navigationController?.pushViewController(InstructionsViewController(), animated: true)
+        }
     }
     
     @objc private func keepUserLoggedIn(_ sender: UIButton) {
         print(#function)
-        //Store in User Defaults
+        //TODO: Store in User Defaults
         self.animateRememberButton(sender)
     }
     
@@ -309,15 +314,6 @@ extension EmailSignInViewController: UITextFieldDelegate {
             scrollView.setContentOffset(.zero, animated: true)
         }
         return false
-    }
-}
-
-
-//MARK: - Tap Anywhere To Dismiss Keyboard
-extension EmailSignInViewController {
-    private func dismissKeyboardTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        self.view.addGestureRecognizer(tapGesture)
     }
 }
 

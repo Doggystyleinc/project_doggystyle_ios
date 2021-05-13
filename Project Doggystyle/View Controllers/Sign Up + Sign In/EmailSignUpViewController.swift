@@ -156,14 +156,14 @@ final class EmailSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureVC()
-        observeForKeyboard()
-        dismissKeyboardTapGesture()
-        addTitleViews()
-        addScrollView()
-        addTextFields()
-        addTermsViews()
-        addSignUpButton()
+        self.configureVC()
+        self.observeForKeyboard()
+        self.dismissKeyboardTapGesture()
+        self.addTitleViews()
+        self.addScrollView()
+        self.addTextFields()
+        self.addTermsViews()
+        self.addSignUpButton()
     }
 }
 
@@ -330,6 +330,7 @@ extension EmailSignUpViewController {
     
     @objc private func didTapSignUp(_ sender: UIButton) {
         print(#function)
+        //TODO: - Disable until agree to terms is selected
     }
     
     @objc func adjustForKeyboard(notification: Notification) {
@@ -377,13 +378,5 @@ extension EmailSignUpViewController: UITextFieldDelegate {
             confirmPWErrorLabel.isHidden = true
             confirmPWErrorLabel.text = ""
         }
-    }
-}
-
-//MARK: - Tap Anywhere To Dismiss Keyboard
-extension EmailSignUpViewController {
-    private func dismissKeyboardTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        self.view.addGestureRecognizer(tapGesture)
     }
 }
