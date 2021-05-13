@@ -1,0 +1,6 @@
+framework module Pods_Project_Doggystyle {
+  umbrella header "Pods-Project Doggystyle-umbrella.h"
+
+  export *
+  module * { export * }
+}

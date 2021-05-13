@@ -15,7 +15,7 @@ extension String {
         return emailPredicate.evaluate(with: self)
     }
     
-    //8 character minimumpas
+    //8 character minimum
     var isValidPassword: Bool {
         let passwordFormat = "(?=.*[a-z]).{8,}"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordFormat)
