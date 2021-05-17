@@ -51,6 +51,10 @@
 		CD9AD5E12640A544007B509B /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5E02640A544007B509B /* DividerView.swift */; };
 		CD9AD5EB26419B59007B509B /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AD5EA26419B59007B509B /* EmailSignUpViewController.swift */; };
 		CDA5F62B2642F71E00EF5A49 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */; };
+		CDE870BE264D8E290082551B /* Firebase+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE870BD264D8E280082551B /* Firebase+Ext.swift */; };
+		CDE870C0264D99390082551B /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE870BF264D99390082551B /* LoadingScreen.swift */; };
+		CDE870C2264D99920082551B /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE870C1264D99920082551B /* NetworkMonitor.swift */; };
+		CDE870CA2652AD2D0082551B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDE870CC2652AD2D0082551B /* Localizable.strings */; };
 		E305BDA6264B65B500556EFC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E305BDA5264B65B500556EFC /* .gitignore */; };
 		E3F6AF6A264074F6006696CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF69264074F6006696CF /* AppDelegate.swift */; };
 		E3F6AF6C264074F6006696CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6AF6B264074F6006696CF /* SceneDelegate.swift */; };
@@ -92,6 +96,16 @@
 		CD9AD5E02640A544007B509B /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		CD9AD5EA26419B59007B509B /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
 		CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
+		CDE870B9264D8ACB0082551B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDE870BB264D8B0E0082551B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDE870BD264D8E280082551B /* Firebase+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Firebase+Ext.swift"; sourceTree = "<group>"; };
+		CDE870BF264D99390082551B /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		CDE870C1264D99920082551B /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		CDE870C72652AAC30082551B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CDE870CB2652AD2D0082551B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CDE870CD2652AD320082551B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CDE870CE2652AD740082551B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CDE870CF2652AD750082551B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E305BDA5264B65B500556EFC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E3F6AF66264074F6006696CF /* Project Doggystyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Doggystyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F6AF69264074F6006696CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,11 +175,15 @@
 		CD9AD5B126407CCB007B509B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CDE870BD264D8E280082551B /* Firebase+Ext.swift */,
 				CD9AD5B226407CDD007B509B /* UIFont+Ext.swift */,
 				CD9AD5B426407D01007B509B /* UIColor+Ext.swift */,
 				CDA5F62A2642F71E00EF5A49 /* String + Ext.swift */,
 				CD7F6FD9264435FA00C337AB /* TextField+Ext.swift */,
 				CD7F7015264D5B5100C337AB /* UIViewController+Ext.swift */,
+				CDE870C1264D99920082551B /* NetworkMonitor.swift */,
+				CDE870BF264D99390082551B /* LoadingScreen.swift */,
+				CDE870CC2652AD2D0082551B /* Localizable.strings */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -215,6 +233,31 @@
 			path = UIViews;
 			sourceTree = "<group>";
 		};
+		CDE870B6264D8A9F0082551B /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CDE870B8264D8AB10082551B /* Prod */,
+				CDE870B7264D8AAB0082551B /* Dev */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CDE870B7264D8AAB0082551B /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				CDE870B9264D8ACB0082551B /* GoogleService-Info.plist */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
+		CDE870B8264D8AB10082551B /* Prod */ = {
+			isa = PBXGroup;
+			children = (
+				CDE870BB264D8B0E0082551B /* GoogleService-Info.plist */,
+			);
+			path = Prod;
+			sourceTree = "<group>";
+		};
 		E305BDA0264B655300556EFC /* Git */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +287,7 @@
 		E3F6AF68264074F6006696CF /* Project Doggystyle */ = {
 			isa = PBXGroup;
 			children = (
+				CDE870B6264D8A9F0082551B /* Firebase */,
 				E305BDA0264B655300556EFC /* Git */,
 				CD9AD5D826409BB1007B509B /* Views */,
 				CD9AD5B626407D21007B509B /* Fonts */,
@@ -299,6 +343,7 @@
 				E3F6AF64264074F6006696CF /* Resources */,
 				2026C9790A840C74F32BA955 /* [CP] Embed Pods Frameworks */,
 				192BBBEC2349F8C9CCEE6BAD /* [CP] Copy Pods Resources */,
+				CDE870BC264D8B530082551B /* Setup Firebase Environment GoogleService-info.plist */,
 			);
 			buildRules = (
 			);
@@ -346,6 +391,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				es,
 			);
 			mainGroup = E3F6AF5D264074F6006696CF;
 			packageReferences = (
@@ -369,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE870CA2652AD2D0082551B /* Localizable.strings in Resources */,
 				E305BDA6264B65B500556EFC /* .gitignore in Resources */,
 				CD9AD5CD26407D40007B509B /* Roboto-Medium.ttf in Resources */,
 				CD9AD5C726407D40007B509B /* Roboto-Bold.ttf in Resources */,
@@ -447,6 +495,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CDE870BC264D8B530082551B /* Setup Firebase Environment GoogleService-info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Firebase Environment GoogleService-info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Prod/${GOOGLESERVICE_INFO_PLIST}\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\necho \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\nexit 1\nfi\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\necho \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\nexit 1\nfi\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Release\" ]\nthen\necho \"Using ${GOOGLESERVICE_INFO_PROD}\"\ncp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelse\necho \"Using ${GOOGLESERVICE_INFO_DEV}\"\ncp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -456,13 +522,16 @@
 			files = (
 				CD9AD5D526407F2A007B509B /* SignUpViewController.swift in Sources */,
 				CD9AD5B326407CDD007B509B /* UIFont+Ext.swift in Sources */,
+				CDE870BE264D8E290082551B /* Firebase+Ext.swift in Sources */,
 				CD7F7016264D5B5100C337AB /* UIViewController+Ext.swift in Sources */,
 				CD9AD5D726408153007B509B /* HomeViewController.swift in Sources */,
 				CD9AD5E12640A544007B509B /* DividerView.swift in Sources */,
 				CD7F6FDA264435FA00C337AB /* TextField+Ext.swift in Sources */,
 				CDA5F62B2642F71E00EF5A49 /* String + Ext.swift in Sources */,
+				CDE870C0264D99390082551B /* LoadingScreen.swift in Sources */,
 				E3F6AF6E264074F6006696CF /* DecisionController.swift in Sources */,
 				CD9AD5DB26409BC2007B509B /* DSButton.swift in Sources */,
+				CDE870C2264D99920082551B /* NetworkMonitor.swift in Sources */,
 				CD7F7018264D5C5F00C337AB /* ResetPasswordViewController.swift in Sources */,
 				CD9AD5B526407D01007B509B /* UIColor+Ext.swift in Sources */,
 				CD7F6FD826442E5300C337AB /* SignInViewController.swift in Sources */,
@@ -479,10 +548,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CDE870CC2652AD2D0082551B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDE870CB2652AD2D0082551B /* en */,
+				CDE870CD2652AD320082551B /* fr */,
+				CDE870CF2652AD750082551B /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E3F6AF74264074F7006696CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E3F6AF75264074F7006696CF /* Base */,
+				CDE870C72652AAC30082551B /* fr */,
+				CDE870CE2652AD740082551B /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -494,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -555,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

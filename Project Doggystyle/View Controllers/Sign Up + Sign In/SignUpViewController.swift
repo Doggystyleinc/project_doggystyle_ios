@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
-final class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController, GIDSignInDelegate {
     private let verticalPadding: CGFloat = 30.0
     
     private let welcomeTitle: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.robotoBold(size: 30)
-        label.text = "Welcome!"
+        label.text = NSLocalizedString("Welcome", comment: "")
         label.textColor = .headerColor
         return label
     }()
@@ -21,7 +23,7 @@ final class SignUpViewController: UIViewController {
     private let welcomeSubTitle: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.robotoRegular(size: 18)
-        label.text = "Please sign up with:"
+        label.text = NSLocalizedString("SignUpWith", comment: "Please sign up with:")
         label.textColor = .textColor
         return label
     }()
@@ -29,7 +31,7 @@ final class SignUpViewController: UIViewController {
     private let footerText: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.robotoRegular(size: 18)
-        label.text = "Already have an account?"
+        label.text = NSLocalizedString("AlreadyHave", comment: "Already have an account?")
         label.textColor = .textColor
         return label
     }()
@@ -41,7 +43,8 @@ final class SignUpViewController: UIViewController {
             .foregroundColor : UIColor.textColor,
             .underlineStyle : NSUnderlineStyle.single.rawValue
         ]
-        let attributeString = NSMutableAttributedString(string: "SIGN IN", attributes: attributes)
+        let buttonTitle = NSLocalizedString("SignIn", comment: "SIGN IN")
+        let attributeString = NSMutableAttributedString(string: buttonTitle, attributes: attributes)
         button.setAttributedTitle(attributeString, for: .normal)
         button.addTarget(self, action: #selector(presentSignIn(_:)), for: .touchUpInside)
         return button
@@ -49,10 +52,19 @@ final class SignUpViewController: UIViewController {
     
     private let dividerView = DividerView()
     
-    private let emailButton = DSButton(titleText: "email", backgroundColor: .dsGrey, titleColor: .white)
-    private let googleButton = DSButton(text: "google")
-    private let facebookButton = DSButton(text: "facebook")
-    private let appleButton = DSButton(text: "apple")
+    private let emailButton = DSButton(titleText: NSLocalizedString("email", comment: "email"), backgroundColor: .dsGrey, titleColor: .white)
+    private let facebookButton = DSButton(text: NSLocalizedString("facebook", comment: "facebook"))
+    private let appleButton = DSButton(text: NSLocalizedString("apple", comment: "apple"))
+    
+    private let googleButton : GIDSignInButton = {
+        let gb = GIDSignInButton()
+        gb.translatesAutoresizingMaskIntoConstraints = false
+        gb.backgroundColor = .white
+        gb.layer.masksToBounds = true
+        gb.layer.cornerRadius = 0
+       return gb
+    }()
+
     
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
@@ -61,10 +73,20 @@ final class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.configureVC()
         self.addWelcomeViews()
         self.addSignUpButtons()
         self.addTargets()
+    }
+}
+
+
+//MARK: - Configure View Controller
+extension SignUpViewController {
+    private func configureVC() {
+        self.view.backgroundColor = .white
+        GIDSignIn.sharedInstance().presentingViewController = self
+        GIDSignIn.sharedInstance()?.delegate = self
     }
 }
 
@@ -87,6 +109,41 @@ extension SignUpViewController {
         dividerView.right(to: self.view, offset: -verticalPadding)
     }
 }
+
+//MARK: - Configure Google Sign In
+extension SignUpViewController {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+      
+      if let error = error {
+         print("error occured here signing in with google sign in. \(error)")
+        return
+      }
+
+      guard let authentication = user.authentication else {
+        print("Authentication error. \(error?.localizedDescription as Any)")
+        return
+      }
+        
+      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        let referralCode = "Need to figure this one out"
+        
+        Service.shared.firebaseGoogleSignIn(credentials: credential, referralCode: referralCode) { (hasSuccess, response) in
+            
+            if hasSuccess {
+                self.presentHomeController()
+            } else {
+                print("Failed to authenticate with error: \(response)")
+            }
+        }
+    }
+
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        print("bailed from the google sign in process")
+    }
+}
+
 
 //MARK: - Configure Sign Up/In Buttons
 extension SignUpViewController {
@@ -138,6 +195,15 @@ extension SignUpViewController {
 
 //MARK: - @objc Functions
 extension SignUpViewController {
+    @objc func presentHomeController() {
+        let homeVC = HomeViewController()
+        let navVC = UINavigationController(rootViewController: homeVC)
+        
+        navVC.navigationBar.isHidden = true
+        navVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(navVC, animated: true)
+    }
+    
     @objc private func presentEmailSignUp(_ sender: UIButton) {
         let emailSignUpVC = EmailSignUpViewController()
         self.navigationController?.pushViewController(emailSignUpVC, animated: true)

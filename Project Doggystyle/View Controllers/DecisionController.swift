@@ -10,16 +10,15 @@
  */
 
 import UIKit
+import Firebase
 
 final class DecisionController: UIViewController {
-    private let isUserAuthenticated = false
-    
     private let placeholderLogo: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "PlaceholderLogo"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -32,7 +31,6 @@ final class DecisionController: UIViewController {
 extension DecisionController {
     private func addLogoView() {
         self.view.addSubview(placeholderLogo)
-        
         placeholderLogo.topToSuperview(offset: 164.0, usingSafeArea: true)
         placeholderLogo.left(to: self.view, offset: 31.0)
         placeholderLogo.right(to: self.view, offset: -31.0)
@@ -41,13 +39,24 @@ extension DecisionController {
 
 //MARK: - Authentication Checks
 extension DecisionController {
+    
     private func authenticationCheck() {
-        //User is authenticated
-        if isUserAuthenticated {
-            self.perform(#selector(presentHomeController), with: nil, afterDelay: 1.0)
-        } else {
-            //User is not authenticated
+        let auth = Auth.auth().currentUser?.uid ?? nil
+        
+        //USER IS NOT AUTHENTICATED
+        if auth == nil {
             self.perform(#selector(presentSignUpController), with: nil, afterDelay: 1.0)
+            
+            //USER IS AUTHENTICATED
+        } else if auth != nil {
+            //DOUBLE CHECK A NODE UNDER ALL USERS TO MAKE SURE IT EXISTS-> WE CAN ROUTE HERE AND AUTOFILL THEIR DATA
+            Service.shared.authCheck { (hasAuth) in
+                if hasAuth {
+                    self.perform(#selector(self.presentHomeController), with: nil, afterDelay: 1.0)
+                } else {
+                    self.perform(#selector(self.presentSignUpController), with: nil, afterDelay: 1.0)
+                }
+            }
         }
     }
 }
@@ -66,6 +75,8 @@ extension DecisionController {
     @objc func presentSignUpController() {
         let signUpVC = SignUpViewController()
         let navVC = UINavigationController(rootViewController: signUpVC)
+        
+        navVC.navigationBar.isHidden = true
         navVC.modalPresentationStyle = .fullScreen
         self.navigationController?.present(navVC, animated: true)
     }

@@ -330,7 +330,7 @@ extension EmailSignUpViewController {
     
     @objc private func didTapSignUp(_ sender: UIButton) {
         print(#function)
-        //TODO: - Disable until agree to terms is selected
+        //TODO: - Disable until agree to terms is selected or default to auto agreement
     }
     
     @objc func adjustForKeyboard(notification: Notification) {
